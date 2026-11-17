@@ -1,0 +1,103 @@
+{
+  "equipo": {
+    "so": "Linux-6.18.44-fc-v553-x86_64-with-glibc2.39",
+    "procesador": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+    "nucleos": 2,
+    "ram": "7.8 GB",
+    "python": "3.13.18"
+  },
+  "repeticiones": 5,
+  "filas": [
+    {
+      "registros": 1000,
+      "nodos": 2,
+      "ts": 0.001,
+      "tp_v1": 0.0105,
+      "acel_v1": 0.1,
+      "tp_v2": 0.0062,
+      "acel_v2": 0.17,
+      "iguales": true
+    },
+    {
+      "registros": 1000,
+      "nodos": 4,
+      "ts": 0.001,
+      "tp_v1": 0.0111,
+      "acel_v1": 0.09,
+      "tp_v2": 0.012,
+      "acel_v2": 0.09,
+      "iguales": true
+    },
+    {
+      "registros": 10000,
+      "nodos": 2,
+      "ts": 0.0105,
+      "tp_v1": 0.0244,
+      "acel_v1": 0.43,
+      "tp_v2": 0.0186,
+      "acel_v2": 0.56,
+      "iguales": true
+    },
+    {
+      "registros": 10000,
+      "nodos": 4,
+      "ts": 0.0105,
+      "tp_v1": 0.0352,
+      "acel_v1": 0.3,
+      "tp_v2": 0.0186,
+      "acel_v2": 0.56,
+      "iguales": true
+    },
+    {
+      "registros": 100000,
+      "nodos": 2,
+      "ts": 0.1098,
+      "tp_v1": 0.2563,
+      "acel_v1": 0.43,
+      "tp_v2": 0.0892,
+      "acel_v2": 1.23,
+      "iguales": true
+    },
+    {
+      "registros": 100000,
+      "nodos": 4,
+      "ts": 0.1098,
+      "tp_v1": 0.2285,
+      "acel_v1": 0.48,
+      "tp_v2": 0.0993,
+      "acel_v2": 1.11,
+      "iguales": true
+    },
+    {
+      "registros": 500000,
+      "nodos": 2,
+      "ts": 0.5699,
+      "tp_v1": 1.3249,
+      "acel_v1": 0.43,
+      "tp_v2": 0.3691,
+      "acel_v2": 1.54,
+      "iguales": true
+    },
+    {
+      "registros": 500000,
+      "nodos": 4,
+      "ts": 0.5699,
+      "tp_v1": 1.1951,
+      "acel_v1": 0.48,
+      "tp_v2": 0.3946,
+      "acel_v2": 1.44,
+      "iguales": true
+    }
+  ],
+  "fallo": {
+    "registros": 100000,
+    "nodos": 4,
+    "nodo_fallido": 1,
+    "aborta_sin_reintento": true,
+    "fallos": 1,
+    "reintentos": 1,
+    "tp_con_reintento": 0.1195,
+    "tp_sin_fallo": 0.1072,
+    "correcto": true
+  }
+}

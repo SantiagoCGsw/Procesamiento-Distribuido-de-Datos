@@ -1,0 +1,27 @@
+CARACTERISTICAS DEL EQUIPO
+  SO: Linux-6.18.44-fc-v553-x86_64-with-glibc2.39
+  Procesador: Intel(R) Xeon(R) Processor @ 2.10GHz
+  Nucleos logicos: 2
+  RAM: 7.8 GB
+  Python: 3.13.18
+
+Repeticiones por medicion: 5 (se reporta la mediana)
+Paralelismo SIMULADO con procesos del SO (multiprocessing), sin cluster real.
+
+Variante v1: el coordinador lee y envia las filas a los nodos.
+Variante v2: cada nodo lee su propio bloque (byte range) del archivo.
+
+ Registros  Nodos    Ts (s)  Tp v1 (s)  Acel v1  Tp v2 (s)  Acel v2  Iguales
+     1,000      2    0.0010     0.0105    0.10x     0.0062    0.17x     True
+     1,000      4    0.0010     0.0111    0.09x     0.0120    0.09x     True
+    10,000      2    0.0105     0.0244    0.43x     0.0186    0.56x     True
+    10,000      4    0.0105     0.0352    0.30x     0.0186    0.56x     True
+   100,000      2    0.1098     0.2563    0.43x     0.0892    1.23x     True
+   100,000      4    0.1098     0.2285    0.48x     0.0993    1.11x     True
+   500,000      2    0.5699     1.3249    0.43x     0.3691    1.54x     True
+   500,000      4    0.5699     1.1951    0.48x     0.3946    1.44x     True
+
+PRUEBA DE TOLERANCIA A FALLOS (variante v2, 100.000 registros, 4 nodos, falla el nodo 1)
+  Sin reintento: el trabajo completo se aborta -> Nodo 1 fallo antes de entregar su resultado
+  Con reintento: fallos=1, reintentos=1, tiempo=0.1195 s, resultado correcto=True
+  Tiempo sin fallo (mediana de 3): 0.1072 s

@@ -1,0 +1,42 @@
+Archivo: ventas_500000.csv | nodos (procesos simulados): 4
+Parciales por nodo (antes de consolidar):
+  nodo 0: 126,801 registros, pid 1101, 78.7 ms, ingresos parciales = 532,002,709,094
+  nodo 1: 124,392 registros, pid 1102, 65.3 ms, ingresos parciales = 525,116,395,588
+  nodo 2: 124,407 registros, pid 1104, 60.5 ms, ingresos parciales = 521,575,272,346
+  nodo 3: 124,400 registros, pid 1103, 39.3 ms, ingresos parciales = 522,828,008,129
+Suma de parciales = 2,101,522,385,157 | consolidado = 2,101,522,385,157 | coinciden: True
+Resultado paralelo == secuencial: True
+Ts=0.613s  Tp=0.388s  aceleracion=1.58x
+
+Ingresos totales por ciudad (COP):
+  Medellin           212,976,141,386
+  Cali               211,067,403,946
+  Cucuta             210,522,290,037
+  Pereira            210,249,871,534
+  Cartagena          210,215,405,652
+  Manizales          210,000,574,246
+  Bogota             209,980,750,647
+  Santa Marta        209,937,120,227
+  Bucaramanga        209,175,849,631
+  Barranquilla       207,396,977,851
+
+Top 5 productos por cantidad vendida:
+  Tablet           232,088
+  Audifonos        230,716
+  Laptop           229,816
+  Teclado          229,793
+  Celular          229,662
+
+Ingresos por mes (COP):
+  2025-01       179,986,682,990
+  2025-02       160,668,328,992
+  2025-03       177,757,149,310
+  2025-04       172,555,273,857
+  2025-05       177,648,885,440
+  2025-06       174,068,193,425
+  2025-07       176,827,045,754
+  2025-08       177,392,415,562
+  2025-09       171,595,473,629
+  2025-10       178,547,042,088
+  2025-11       174,119,784,011
+  2025-12       180,356,110,099

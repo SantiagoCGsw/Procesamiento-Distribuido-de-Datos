@@ -1,0 +1,515 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Panel de Ventas Distribuidas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: una columna de lectura a la izquierda; el explorador de tiempos es el unico bloque con superficie propia. */
+:root {
+  /* Papel frío y azul eléctrico: tinta casi negra, un solo acento azul puro y verde/rojo solo para estados. */
+  --bg: #f0f0eb;
+  --surface: #f8f8f5;
+  --ink: #101014;
+  --muted: #5a5c63;
+  --line: #d7d7d1;
+  --seq: #101014;
+  --v1: #9599a0;
+  --par: #1a3fff;
+  --ok: #17633a;
+  --err: #b3232a;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101014; --surface: #17171c; --ink: #ececf0; --muted: #9a9da6; --line: #2a2a33;
+    --seq: #d4d6dc; --v1: #6b6f78; --par: #8590ff; --ok: #4ccf84; --err: #ff6b6b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101014; --surface: #17171c; --ink: #ececf0; --muted: #9a9da6; --line: #2a2a33;
+  --seq: #d4d6dc; --v1: #6b6f78; --par: #8590ff; --ok: #4ccf84; --err: #ff6b6b;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.55;
+  padding-block: 40px 72px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1040px; margin: 0 auto; display: grid; gap: 56px; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.5rem, 3.4vw, 2rem); font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-size: 1.1rem; font-weight: 500; }
+p { margin: 0; max-width: 62ch; }
+.muted { color: var(--muted); }
+.num { font-variant-numeric: tabular-nums; }
+.intro { display: grid; gap: 16px; }
+.badge {
+  display: inline-block; width: fit-content; padding: 4px 12px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--muted); font-size: 0.9rem;
+}
+section { display: grid; gap: 20px; min-width: 0; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: grid; gap: 24px; min-width: 0; }
+.controls { display: flex; flex-wrap: wrap; gap: 20px 32px; }
+.group { display: grid; gap: 8px; }
+.group > span { font-size: 0.9rem; color: var(--muted); }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.seg button {
+  font: inherit; font-size: 0.95rem; color: var(--ink); background: transparent; border: 0;
+  padding: 8px 14px; cursor: pointer; border-right: 1px solid var(--line);
+}
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+button:focus-visible { outline: 3px solid var(--par); outline-offset: 2px; }
+.bars { display: grid; gap: 14px; }
+.bar-row { display: grid; grid-template-columns: 170px 1fr 150px; gap: 12px; align-items: center; }
+.bar-row .lab { font-size: 0.95rem; }
+.bar-row .lab small { display: block; color: var(--muted); font-size: 0.82rem; }
+.track { position: relative; height: 30px; background: color-mix(in srgb, var(--line) 45%, transparent); border-radius: 6px; }
+.fill { height: 100%; border-radius: 6px; min-width: 3px; transition: width .35s ease; }
+.val { font-size: 0.95rem; white-space: nowrap; color: var(--muted); }
+.val.res { color: var(--par); font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 40px; border-top: 3px solid var(--par); padding-top: 20px; }
+.results .big { font-family: var(--font-display); font-weight: 700; color: var(--par); font-size: clamp(2rem, 5vw, 3rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 6px; }
+.results p { color: var(--ink); font-size: 0.98rem; }
+.verdict { font-family: var(--font-display); font-size: 1.25rem; font-weight: 500; max-width: 56ch; }
+.chartbox { overflow-x: auto; }
+.chartbox svg { width: 100%; min-width: 520px; height: auto; display: block; }
+.split .chartbox svg { min-width: 0; }
+svg text { fill: var(--ink); font-family: var(--font-body); }
+svg .m { fill: var(--muted); }
+.split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+.node-strip { display: flex; gap: 4px; }
+.node-block {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  padding: 12px; min-width: 0; display: grid; gap: 2px; font-size: 0.9rem;
+}
+.node-block b { font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; }
+.node-block.fail { border: 2px dashed var(--err); }
+.node-block.retry { border: 2px solid var(--par); }
+.sumline { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; padding-top: 8px; border-top: 1px solid var(--line); }
+.ok { color: var(--ok); font-weight: 700; }
+.ok.no { color: var(--err); }
+.fault-out { min-height: 3.2em; font-size: 1.05rem; }
+.fault-out .bad { color: var(--err); font-weight: 700; }
+.btn { font: inherit; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); border-radius: 10px; padding: 9px 16px; cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+td, th { text-align: left; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); font-weight: 400; }
+td:first-child { color: var(--muted); width: 40%; }
+.runlog { margin: 0; max-height: 260px; overflow: auto; background: color-mix(in srgb, var(--line) 35%, transparent); border-radius: 8px; padding: 12px; font: 13px/1.45 ui-monospace, Menlo, Consolas, monospace; white-space: pre-wrap; }
+select { font: inherit; font-size: 0.95rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+@media (max-width: 760px) {
+  .split { grid-template-columns: 1fr; gap: 40px; }
+  .bar-row { grid-template-columns: 1fr; gap: 6px; }
+  .results { grid-template-columns: 1fr !important; }
+  .node-strip { flex-wrap: wrap; }
+  .node-block { flex: 1 1 140px !important; }
+}
+@media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="intro">
+    <h1>Panel de ventas distribuidas</h1>
+    <p>Resultados de repartir el cálculo de reportes de ventas entre varios procesos y unir sus resultados. Elige un tamaño de datos y mira cuándo conviene distribuir.</p>
+    <span class="badge" id="badge"></span>
+  </header>
+
+  <section aria-labelledby="t-res" class="resbox">
+    <h2 id="t-res" class="sr">Resultados principales</h2>
+    <div class="results" id="results"></div>
+  </section>
+
+  <section aria-labelledby="t-explorer">
+    <h2 id="t-explorer">¿Cuándo conviene repartir el trabajo?</h2>
+    <div class="panel">
+      <div class="controls">
+        <div class="group"><span>Registros de ventas</span>
+          <div class="seg" id="seg-size" role="group" aria-label="Registros de ventas"></div></div>
+        <div class="group"><span>Nodos (procesos)</span>
+          <div class="seg" id="seg-nodes" role="group" aria-label="Nodos"></div></div>
+      </div>
+      <div class="bars" id="bars"></div>
+      <p class="verdict" id="verdict" aria-live="polite"></p>
+    </div>
+    <p class="muted">Cada tiempo es la mediana de <span id="reps"></span> repeticiones e incluye lectura del archivo, cálculo y consolidación. En la versión 1 el coordinador lee todo y envía las filas a los nodos. En la versión 2 cada nodo lee su propio bloque del archivo.</p>
+  </section>
+
+  <section aria-labelledby="t-accel">
+    <h2 id="t-accel">Aceleración según el tamaño</h2>
+    <p>Aceleración es el tiempo secuencial dividido por el paralelo. Por encima de la línea punteada, repartir gana. Con más datos el costo fijo de crear procesos pesa menos.</p>
+    <div class="chartbox"><svg id="accel" viewBox="0 0 680 300" role="img" aria-label="Aceleración de la versión 1 y la versión 2 según el número de registros"></svg></div>
+  </section>
+
+  <section aria-labelledby="t-split">
+    <h2 id="t-split"></h2>
+    <p id="split-text"></p>
+    <div class="node-strip" id="strip"></div>
+    <div class="sumline" id="sumline"></div>
+  </section>
+
+  <section aria-labelledby="t-rep">
+    <h2 id="t-rep">Los tres reportes consolidados</h2>
+    <p>Mismos resultados que el cálculo secuencial. Los datos son aleatorios, así que las diferencias entre ciudades y productos son pequeñas y no tienen lectura de negocio.</p>
+    <div class="split">
+      <div><h3>Ingresos por ciudad (miles de millones de COP)</h3><div class="chartbox"><svg id="city" viewBox="0 0 460 330" role="img" aria-label="Ingresos por ciudad"></svg></div></div>
+      <div><h3>Cinco productos más vendidos (unidades)</h3><div class="chartbox"><svg id="top5" viewBox="0 0 460 190" role="img" aria-label="Top 5 de productos por cantidad"></svg></div></div>
+    </div>
+    <div>
+      <h3>Ingresos por mes de 2025 (miles de millones de COP)</h3>
+      <div class="chartbox"><svg id="month" viewBox="0 0 680 250" role="img" aria-label="Ingresos por mes"></svg></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-fault">
+    <h2 id="t-fault">Qué pasa si un nodo falla</h2>
+    <p id="fault-intro"></p>
+    <div class="panel">
+      <div class="row">
+        <div class="seg" id="seg-retry" role="group" aria-label="Política de recuperación"></div>
+        <button class="btn" id="fail"></button>
+        <button class="btn ghost" id="reset">Reiniciar</button>
+      </div>
+      <div class="node-strip" id="fstrip"></div>
+      <p class="fault-out" id="fout" aria-live="polite"></p>
+    </div>
+    <p class="muted">El fallo se simula con un error lanzado por el nodo, no con la caída de una máquina. El coordinador sigue siendo un único punto de falla.</p>
+  </section>
+
+  <section aria-labelledby="t-run" id="run" hidden>
+    <h2 id="t-run">Ejecutar las pruebas en este equipo</h2>
+    <p>Lanza los scripts del proyecto desde aquí. Al terminar, el panel se recarga con los resultados nuevos.</p>
+    <div class="panel">
+      <div class="controls">
+        <div class="group"><span>Procesar un archivo</span>
+          <div class="row"><select id="run-file" aria-label="Archivo de ventas"></select>
+          <select id="run-nodes" aria-label="Nodos"></select>
+          <button class="btn" id="run-proc" type="button">Ejecutar</button></div></div>
+        <div class="group"><span>Pruebas de rendimiento completas</span>
+          <div class="row"><button class="btn" id="run-bench" type="button">Ejecutar benchmark</button></div></div>
+      </div>
+      <p class="muted" id="run-status" aria-live="polite">Listo para ejecutar.</p>
+      <pre id="run-log" class="runlog" hidden></pre>
+    </div>
+    <p class="muted">El benchmark repite cada medición 5 veces y puede tardar varios minutos. Mientras corre, no uses el equipo para otras tareas pesadas: alteraría los tiempos.</p>
+  </section>
+
+  <section aria-labelledby="t-eq">
+    <h2 id="t-eq">Equipo de las pruebas</h2>
+    <table id="eq"></table>
+    <p class="muted" id="eq-note"></p>
+  </section>
+</div>
+
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  // Los datos los inyecta generar_panel.py desde resultados_benchmark.json y evidencia_ejecucion_N.json.
+  var D = /*__DATOS__*/null;
+  var FILAS = D.benchmark.filas, FALLO = D.benchmark.fallo, EQ = D.benchmark.equipo;
+  var DATA = {}, SIZES = [], NODOS = [];
+  FILAS.forEach(function (f) {
+    if (!DATA[f.registros]) { DATA[f.registros] = { ts: f.ts }; SIZES.push(f.registros); }
+    DATA[f.registros][f.nodos] = { t1: f.tp_v1, t2: f.tp_v2, a1: f.acel_v1, a2: f.acel_v2 };
+    if (NODOS.indexOf(f.nodos) < 0) NODOS.push(f.nodos);
+  });
+  SIZES.sort(function (a, b) { return a - b; });
+  NODOS.sort(function (a, b) { return a - b; });
+  var BIG = SIZES[SIZES.length - 1];
+  var ACENTOS = { "Medellin": "Medellín", "Cucuta": "Cúcuta", "Bogota": "Bogotá", "Audifonos": "Audífonos", "Camara": "Cámara" };
+  var MESES = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+  function nom(x) { return ACENTOS[x] || x; }
+  var EV = D.evidencia, CONS = EV.consolidado;
+  var NODES = EV.parciales.map(function (p) { return { n: p.nodo, rec: p.registros, ms: p.ms, rev: p.ingresos }; });
+  var TOTAL = EV.total;
+  var CITY = Object.keys(CONS.ciudad).map(function (k) { return [nom(k), CONS.ciudad[k] / 1e9]; })
+    .sort(function (a, b) { return b[1] - a[1]; });
+  var TOP5 = CONS.top5.map(function (p) { return [nom(p[0]), p[1]]; });
+  var MONTH = Object.keys(CONS.mes).sort().map(function (k) { return [MESES[parseInt(k.slice(5), 10) - 1], CONS.mes[k] / 1e9]; });
+
+  var state = { size: BIG, nodes: NODOS[0] };
+  NODOS.forEach(function (n) { if (DATA[BIG][n].a2 > DATA[BIG][state.nodes].a2) state.nodes = n; });
+
+  function fmtInt(x) { return x.toLocaleString("es-CO"); }
+  function fmtDec(x, d) { return x.toFixed(d).replace(".", ","); }
+  function fmtTime(t) { return t < 1 ? fmtDec(t * 1000, 1) + " ms" : fmtDec(t, 2) + " s"; }
+  function el(tag, attrs, text) {
+    var e = document.createElementNS(NS, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function html(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  // ---- Segmented buttons
+  function seg(id, items, current, onPick) {
+    var box = document.getElementById(id);
+    box.innerHTML = "";
+    items.forEach(function (it) {
+      var b = html("button", "", it.label);
+      b.type = "button";
+      b.setAttribute("aria-pressed", String(it.value === current));
+      b.addEventListener("click", function () { onPick(it.value); });
+      box.appendChild(b);
+    });
+  }
+
+  // ---- Explorer
+  function renderExplorer() {
+    seg("seg-size", SIZES.map(function (s) { return { label: fmtInt(s), value: s }; }), state.size, function (v) { state.size = v; renderExplorer(); });
+    seg("seg-nodes", NODOS.map(function (n) { return { label: String(n), value: n }; }), state.nodes, function (v) { state.nodes = v; renderExplorer(); renderAccel(); });
+    var d = DATA[state.size], r = d[state.nodes];
+    var max = Math.max(d.ts, r.t1, r.t2);
+    var rows = [
+      { lab: "Secuencial", sub: "un solo proceso", t: d.ts, c: "var(--seq)", a: null },
+      { lab: "Paralelo v1", sub: "el coordinador reparte filas", t: r.t1, c: "var(--v1)", a: r.a1 },
+      { lab: "Paralelo v2", sub: "cada nodo lee su bloque", t: r.t2, c: "var(--par)", a: r.a2 }
+    ];
+    var bars = document.getElementById("bars");
+    bars.innerHTML = "";
+    rows.forEach(function (row) {
+      var wrap = html("div", "bar-row");
+      var lab = html("div", "lab", row.lab);
+      lab.appendChild(html("small", "", row.sub));
+      var track = html("div", "track");
+      var pct = Math.max(row.t / max * 100, 0.5);
+      var fill = html("div", "fill");
+      fill.style.width = pct + "%";
+      fill.style.background = row.c;
+      var isRes = row.lab === "Paralelo v2";
+      var val = html("div", "val num" + (isRes ? " res" : ""), fmtTime(row.t) + (row.a ? "  " + fmtDec(row.a, 2) + "x" : ""));
+      track.appendChild(fill);
+      wrap.appendChild(lab); wrap.appendChild(track); wrap.appendChild(val);
+      bars.appendChild(wrap);
+    });
+    var v = document.getElementById("verdict");
+    if (r.a2 >= 1.05) {
+      v.textContent = "Con " + fmtInt(state.size) + " registros y " + state.nodes + " nodos, la versión 2 termina en " +
+        Math.round(r.t2 / d.ts * 100) + " % del tiempo secuencial.";
+    } else {
+      v.textContent = "Con " + fmtInt(state.size) + " registros, repartir cuesta más de lo que ahorra: el paralelo tarda " +
+        fmtDec(r.t2 / d.ts, 1) + " veces el tiempo secuencial.";
+    }
+  }
+
+  // ---- Acceleration line chart
+  function renderAccel() {
+    var svg = document.getElementById("accel");
+    svg.innerHTML = "";
+    var W = 680, H = 300, L = 52, R = 64, T = 20, B = 56;
+    var maxA = 0;
+    SIZES.forEach(function (sz) { NODOS.forEach(function (n) { maxA = Math.max(maxA, DATA[sz][n].a1, DATA[sz][n].a2); }); });
+    var ymax = Math.max(1.5, Math.ceil((maxA + 0.2) * 5) / 5), paso = ymax > 2.5 ? 1 : 0.5, grid = [];
+    for (var g0 = 0; g0 < ymax; g0 += paso) grid.push(g0);
+    function X(i) { return L + i * (W - L - R) / (SIZES.length - 1); }
+    function Y(v) { return T + (1 - v / ymax) * (H - T - B); }
+    grid.forEach(function (g) {
+      svg.appendChild(el("line", { x1: L, x2: W - R, y1: Y(g), y2: Y(g), stroke: "var(--line)", "stroke-width": 1 }));
+      svg.appendChild(el("text", { x: L - 8, y: Y(g) + 4, "text-anchor": "end", "font-size": 12, class: "m" }, fmtDec(g, 1) + "x"));
+    });
+    svg.appendChild(el("line", { x1: L, x2: W - R, y1: Y(1), y2: Y(1), stroke: "var(--ink)", "stroke-width": 1.5, "stroke-dasharray": "5 4" }));
+    svg.appendChild(el("text", { x: W - R + 6, y: Y(1) + 4, "font-size": 12, class: "m" }, "igual"));
+    SIZES.forEach(function (s, i) {
+      svg.appendChild(el("text", { x: X(i), y: H - B + 22, "text-anchor": "middle", "font-size": 12, class: "m" }, fmtInt(s)));
+    });
+    svg.appendChild(el("text", { x: (L + W - R) / 2, y: H - 8, "text-anchor": "middle", "font-size": 12, class: "m" }, "registros de ventas (" + state.nodes + " nodos)"));
+    [["a1", "var(--v1)", "v1"], ["a2", "var(--par)", "v2"]].forEach(function (s) {
+      var pts = SIZES.map(function (sz, i) { return X(i) + "," + Y(DATA[sz][state.nodes][s[0]]); }).join(" ");
+      svg.appendChild(el("polyline", { points: pts, fill: "none", stroke: s[1], "stroke-width": 3, "stroke-linejoin": "round" }));
+      SIZES.forEach(function (sz, i) {
+        var val = DATA[sz][state.nodes][s[0]];
+        svg.appendChild(el("circle", { cx: X(i), cy: Y(val), r: sz === state.size ? 7 : 4.5, fill: s[1], stroke: "var(--surface)", "stroke-width": 2 }));
+      });
+      var last = DATA[BIG][state.nodes][s[0]];
+      svg.appendChild(el("text", { x: X(SIZES.length - 1) + 12, y: Y(last) + (s[0] === "a1" ? 14 : -6), "font-size": 13, "font-weight": 600, style: "fill:" + (s[0] === "a2" ? "var(--par)" : "var(--ink)") }, s[2] + " " + fmtDec(last, 2) + "x"));
+    });
+  }
+
+  // ---- Node split
+  function renderSplit() {
+    var strip = document.getElementById("strip");
+    strip.innerHTML = "";
+    NODES.forEach(function (n) {
+      var b = html("div", "node-block");
+      b.style.flex = String(n.rec) + " 1 0";
+      b.appendChild(html("b", "", "Nodo " + n.n));
+      b.appendChild(html("span", "num", fmtInt(n.rec) + " registros"));
+      b.appendChild(html("span", "num", fmtDec(n.ms, 1) + " ms de cálculo"));
+      b.appendChild(html("span", "num muted", fmtInt(n.rev) + " COP"));
+      strip.appendChild(b);
+    });
+    var sum = NODES.reduce(function (a, n) { return a + n.rev; }, 0);
+    var s = document.getElementById("sumline");
+    s.innerHTML = "";
+    s.appendChild(html("span", "num", "Suma de parciales: " + fmtInt(sum) + " COP"));
+    s.appendChild(html("span", "num", "Consolidado: " + fmtInt(TOTAL) + " COP"));
+    s.appendChild(html("span", "ok" + (sum === TOTAL ? "" : " no"), sum === TOTAL ? "Coinciden" : "No coinciden"));
+  }
+
+  // ---- Horizontal bars
+  function hbars(id, rows, vmax, fmt, color, W, rowH) {
+    // color: solo la fila mayor lleva el acento; el resto queda en gris azulado.
+    var svg = document.getElementById(id);
+    svg.innerHTML = "";
+    var L = 96, R = 70;
+    rows.forEach(function (r, i) {
+      var y = i * rowH + 4;
+      var w = (W - L - R) * r[1] / vmax;
+      svg.appendChild(el("text", { x: L - 8, y: y + rowH * 0.55, "text-anchor": "end", "font-size": 13 }, r[0]));
+      svg.appendChild(el("rect", { x: L, y: y, width: w, height: rowH - 8, rx: 4, fill: i === 0 ? "var(--par)" : "var(--v1)" }));
+      svg.appendChild(el("text", { x: L + w + 6, y: y + rowH * 0.55, "font-size": 12.5, class: "m" }, fmt(r[1])));
+    });
+  }
+  function renderReports() {
+    hbars("city", CITY, CITY[0][1] * 1.01, function (v) { return fmtDec(v, 1); }, "var(--par)", 460, 32);
+    hbars("top5", TOP5, TOP5[0][1] * 1.03, function (v) { return fmtInt(v); }, "var(--par)", 460, 36);
+    // months column chart
+    var svg = document.getElementById("month");
+    svg.innerHTML = "";
+    var W = 680, H = 250, L = 44, B = 34, T = 14, ymax = 50;
+    MONTH.forEach(function (m) { ymax = Math.max(ymax, Math.ceil(m[1] / 50) * 50); });
+    var minM = MONTH.reduce(function (a, m) { return m[1] < a[1] ? m : a; }, MONTH[0]);
+    function Y(v) { return T + (1 - v / ymax) * (H - T - B); }
+    for (var gy = 0; gy <= ymax; gy += 50) (function (g) {
+      svg.appendChild(el("line", { x1: L, x2: W - 6, y1: Y(g), y2: Y(g), stroke: "var(--line)" }));
+      svg.appendChild(el("text", { x: L - 6, y: Y(g) + 4, "text-anchor": "end", "font-size": 12, class: "m" }, String(g)));
+    })(gy);
+    var bw = (W - L - 6) / MONTH.length;
+    MONTH.forEach(function (m, i) {
+      var x = L + i * bw + bw * 0.18, w = bw * 0.64;
+      var low = m[0] === minM[0];
+      svg.appendChild(el("rect", { x: x, y: Y(m[1]), width: w, height: Y(0) - Y(m[1]), rx: 3, fill: m[0] === "Dic" ? "var(--par)" : "var(--v1)" }));
+      svg.appendChild(el("text", { x: x + w / 2, y: H - 12, "text-anchor": "middle", "font-size": 12, class: "m" }, m[0]));
+      if (low || m[0] === "Dic") svg.appendChild(el("text", { x: x + w / 2, y: Y(m[1]) - 6, "text-anchor": "middle", "font-size": 12 }, fmtDec(m[1], 1)));
+    });
+  }
+
+  // ---- Fault demo
+  var fstate = { retry: true, phase: "idle" };
+  function renderFault() {
+    seg("seg-retry", [{ label: "Con reintento", value: true }, { label: "Sin reintento", value: false }], fstate.retry,
+      function (v) { fstate.retry = v; fstate.phase = "idle"; renderFault(); });
+    var strip = document.getElementById("fstrip");
+    strip.innerHTML = "";
+    for (var i = 0; i < FALLO.nodos; i++) {
+      var cls = "node-block", sub = "entregó su parcial";
+      if (i === FALLO.nodo_fallido && fstate.phase === "failed") {
+        if (fstate.retry) { cls += " retry"; sub = "reintentado por el coordinador"; }
+        else { cls += " fail"; sub = "falló, sin parcial"; }
+      }
+      var b = html("div", cls);
+      b.style.flex = "1 1 0";
+      b.appendChild(html("b", "", "Nodo " + i));
+      b.appendChild(html("span", "", fstate.phase === "idle" ? "trabajando bien" : sub));
+      strip.appendChild(b);
+    }
+    var out = document.getElementById("fout");
+    out.innerHTML = "";
+    if (fstate.phase === "idle") {
+      out.textContent = "Sin fallos el trabajo termina en " + fmtDec(FALLO.tp_sin_fallo, 4) + " s con el resultado correcto.";
+    } else if (fstate.retry) {
+      out.textContent = "Resultado correcto. El coordinador reasignó solo el bloque perdido y tardó " + fmtDec(FALLO.tp_con_reintento, 4) + " s, un " + Math.round((FALLO.tp_con_reintento / FALLO.tp_sin_fallo - 1) * 100) + " % más que sin fallo.";
+    } else {
+      var s = html("span", "bad", "El trabajo se aborta. ");
+      out.appendChild(s);
+      out.appendChild(document.createTextNode("Sin el parcial del nodo " + FALLO.nodo_fallido + " no se pueden completar los reportes."));
+    }
+  }
+  document.getElementById("fail").addEventListener("click", function () { fstate.phase = "failed"; renderFault(); });
+  document.getElementById("reset").addEventListener("click", function () { fstate.phase = "idle"; renderFault(); });
+
+  function renderStatic() {
+    var best = FILAS.reduce(function (a, f) { return f.acel_v2 > a.acel_v2 ? f : a; }, FILAS[0]);
+    var iguales = FILAS.filter(function (f) { return f.iguales; }).length;
+    document.getElementById("badge").textContent = "Simulación con procesos del sistema en una sola máquina de " + EQ.nucleos + (EQ.nucleos === 1 ? " núcleo" : " núcleos") + ", sin red";
+    document.getElementById("reps").textContent = D.benchmark.repeticiones;
+    var res = document.getElementById("results");
+    res.innerHTML = "";
+    [[fmtDec(best.acel_v2, 2) + "x", "Aceleración máxima: " + fmtInt(best.registros) + " registros, " + best.nodos + " nodos, versión 2."],
+     [fmtDec(best.ts, 2) + " s a " + fmtDec(best.tp_v2, 2) + " s", "Tiempo secuencial frente al paralelo con " + fmtInt(best.registros) + " registros."],
+     [iguales + " de " + FILAS.length, "Pruebas con resultado idéntico al cálculo secuencial."]].forEach(function (r) {
+      var d = html("div"); d.appendChild(html("div", "big num", r[0])); d.appendChild(html("p", "", r[1])); res.appendChild(d);
+    });
+    var tot = NODES.reduce(function (a, n) { return a + n.rec; }, 0);
+    document.getElementById("t-split").textContent = "Cómo se reparte el archivo de " + fmtInt(tot) + " registros";
+    document.getElementById("split-text").textContent = "El coordinador corta el archivo en " + NODES.length + " bloques de bytes. Cada nodo suma lo suyo y entrega solo sus totales. Los bloques no son idénticos porque cada fila ocupa un tamaño distinto.";
+    document.getElementById("fault-intro").textContent = "Prueba con " + fmtInt(FALLO.registros) + " registros y " + FALLO.nodos + " nodos. El nodo " + FALLO.nodo_fallido + " falla antes de entregar su resultado.";
+    document.getElementById("fail").textContent = "Hacer fallar el nodo " + FALLO.nodo_fallido;
+    var eq = document.getElementById("eq");
+    eq.innerHTML = "";
+    [["Sistema operativo", EQ.so], ["Procesador", EQ.procesador], ["Núcleos lógicos", String(EQ.nucleos)],
+     ["Memoria RAM", String(EQ.ram).replace(".", ",")], ["Python", EQ.python]].forEach(function (r) {
+      var tr = html("tr"); tr.appendChild(html("td", "", r[0])); tr.appendChild(html("th", r[0] === "Núcleos lógicos" ? "num" : "", r[1])); eq.appendChild(tr);
+    });
+    var maxN = NODOS[NODOS.length - 1];
+    document.getElementById("eq-note").textContent = EQ.nucleos < maxN
+      ? "Con " + EQ.nucleos + (EQ.nucleos === 1 ? " núcleo lógico" : " núcleos lógicos") + ", usar más nodos que núcleos no mejora los tiempos."
+      : "El equipo tiene " + EQ.nucleos + " núcleos lógicos y las pruebas usaron hasta " + maxN + " nodos.";
+  }
+
+  renderStatic(); renderExplorer(); renderAccel(); renderSplit(); renderReports(); renderFault();
+})();
+</script>
+
+<script>
+// Ejecucion desde la interfaz: solo aparece si la pagina la sirve servidor_panel.py.
+(function () {
+  var sec = document.getElementById("run"), st = document.getElementById("run-status"), log = document.getElementById("run-log");
+  var bP = document.getElementById("run-proc"), bB = document.getElementById("run-bench"), timer = null, vistaPrevia = false;
+  function ocupado(v) { bP.disabled = bB.disabled = v; }
+  function pedir(url, opt) { return fetch(url, opt).then(function (r) { return r.json(); }); }
+  function poblar(est) {
+    var f = document.getElementById("run-file"), n = document.getElementById("run-nodes");
+    if (f.options.length) return;
+    est.archivos.forEach(function (a) { var o = document.createElement("option"); o.value = o.textContent = a; f.appendChild(o); });
+    f.selectedIndex = f.options.length - 1;
+    [1, 2, 4, 8].forEach(function (k) { var o = document.createElement("option"); o.value = k; o.textContent = k + (k === 1 ? " nodo" : " nodos"); n.appendChild(o); });
+    n.value = 4;
+  }
+  function refrescar() {
+    pedir("/api/estado").then(function (est) {
+      poblar(est);
+      if (est.corriendo) {
+        ocupado(true); vistaPrevia = true;
+        st.textContent = "Ejecutando " + est.tarea + "… " + Math.round(est.transcurrido) + " s";
+        log.hidden = !est.log.length; log.textContent = est.log.join("\n"); log.scrollTop = log.scrollHeight;
+      } else if (vistaPrevia) {
+        clearInterval(timer);
+        st.textContent = est.codigo === 0 ? "Terminó. Recargando el panel con los resultados nuevos…" : "La prueba terminó con error (código " + est.codigo + "). Revisa el registro.";
+        log.hidden = !est.log.length; log.textContent = est.log.join("\n");
+        if (est.codigo === 0) { location.hash = "t-run"; setTimeout(function () { location.reload(); }, 800); } else { ocupado(false); vistaPrevia = false; }
+      }
+    });
+  }
+  function lanzar(cuerpo) {
+    ocupado(true); st.textContent = "Iniciando…";
+    pedir("/api/ejecutar", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(cuerpo) }).then(function (r) {
+      if (!r.ok) { st.textContent = r.mensaje; ocupado(false); return; }
+      vistaPrevia = true; clearInterval(timer); timer = setInterval(refrescar, 1000); refrescar();
+    });
+  }
+  bP.addEventListener("click", function () { lanzar({ tarea: "procesamiento", archivo: document.getElementById("run-file").value, nodos: parseInt(document.getElementById("run-nodes").value, 10) }); });
+  bB.addEventListener("click", function () { lanzar({ tarea: "benchmark" }); });
+  if (location.protocol.indexOf("http") === 0) {
+    pedir("/api/estado").then(function (est) {
+      sec.hidden = false; poblar(est);
+      if (est.corriendo) { timer = setInterval(refrescar, 1000); refrescar(); }
+    }).catch(function () {});
+  }
+})();
+</script>
+</body></html>

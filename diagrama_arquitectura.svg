@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 665" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="665" fill="#ffffff"/>
+  <text x="550" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#111827">Arquitectura de procesamiento distribuido (simulado) de ventas</text>
+
+  <!-- Fuente CSV -->
+  <rect x="30" y="250" width="150" height="110" rx="10" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+  <text x="105" y="288" text-anchor="middle" font-size="16" font-weight="bold" fill="#0c4a6e">Fuente CSV</text>
+  <text x="105" y="312" text-anchor="middle" font-size="12" fill="#0c4a6e">ventas_N.csv</text>
+  <text x="105" y="330" text-anchor="middle" font-size="12" fill="#0c4a6e">1k / 10k / 100k / 500k</text>
+  <text x="105" y="348" text-anchor="middle" font-size="12" fill="#0c4a6e">registros sinteticos</text>
+
+  <!-- Coordinador: particionamiento -->
+  <rect x="240" y="235" width="170" height="140" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="325" y="268" text-anchor="middle" font-size="16" font-weight="bold" fill="#78350f">Coordinador</text>
+  <text x="325" y="292" text-anchor="middle" font-size="13" fill="#78350f">Particionamiento</text>
+  <text x="325" y="312" text-anchor="middle" font-size="12" fill="#78350f">rangos de bytes</text>
+  <text x="325" y="330" text-anchor="middle" font-size="12" fill="#78350f">alineados a fin de linea</text>
+  <text x="325" y="352" text-anchor="middle" font-size="12" fill="#78350f">(solo calcula offsets)</text>
+
+  <!-- Nodos -->
+  <g>
+    <rect x="490" y="80" width="200" height="100" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+    <text x="590" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#14532d">Nodo 0 (proceso)</text>
+    <text x="590" y="130" text-anchor="middle" font-size="12" fill="#14532d">lee su bloque, parsea</text>
+    <text x="590" y="148" text-anchor="middle" font-size="12" fill="#14532d">agrega ciudad / producto / mes</text>
+    <text x="590" y="166" text-anchor="middle" font-size="12" fill="#14532d">mide su tiempo local</text>
+
+    <rect x="490" y="225" width="200" height="100" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+    <text x="590" y="253" text-anchor="middle" font-size="15" font-weight="bold" fill="#14532d">Nodo 1 (proceso)</text>
+    <text x="590" y="275" text-anchor="middle" font-size="12" fill="#14532d">lee su bloque, parsea</text>
+    <text x="590" y="293" text-anchor="middle" font-size="12" fill="#14532d">agrega ciudad / producto / mes</text>
+    <text x="590" y="311" text-anchor="middle" font-size="12" fill="#14532d">mide su tiempo local</text>
+
+    <rect x="490" y="370" width="200" height="100" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+    <text x="590" y="398" text-anchor="middle" font-size="15" font-weight="bold" fill="#14532d">Nodo 2 (proceso)</text>
+    <text x="590" y="420" text-anchor="middle" font-size="12" fill="#14532d">lee su bloque, parsea</text>
+    <text x="590" y="438" text-anchor="middle" font-size="12" fill="#14532d">agrega ciudad / producto / mes</text>
+    <text x="590" y="456" text-anchor="middle" font-size="12" fill="#14532d">mide su tiempo local</text>
+
+    <rect x="490" y="515" width="200" height="100" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+    <text x="590" y="543" text-anchor="middle" font-size="15" font-weight="bold" fill="#14532d">Nodo 3 (proceso)</text>
+    <text x="590" y="565" text-anchor="middle" font-size="12" fill="#14532d">lee su bloque, parsea</text>
+    <text x="590" y="583" text-anchor="middle" font-size="12" fill="#14532d">agrega ciudad / producto / mes</text>
+    <text x="590" y="601" text-anchor="middle" font-size="12" fill="#14532d">mide su tiempo local</text>
+  </g>
+
+  <!-- Consolidacion -->
+  <rect x="770" y="235" width="150" height="140" rx="10" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="845" y="268" text-anchor="middle" font-size="16" font-weight="bold" fill="#4c1d95">Consolidacion</text>
+  <text x="845" y="294" text-anchor="middle" font-size="12" fill="#4c1d95">suma los parciales</text>
+  <text x="845" y="312" text-anchor="middle" font-size="12" fill="#4c1d95">(fase reduce)</text>
+  <text x="845" y="336" text-anchor="middle" font-size="12" fill="#4c1d95">reasigna la particion</text>
+  <text x="845" y="354" text-anchor="middle" font-size="12" fill="#4c1d95">si un nodo falla</text>
+
+  <!-- Reportes y tiempos -->
+  <rect x="960" y="150" width="125" height="110" rx="10" fill="#fce7f3" stroke="#be185d" stroke-width="2"/>
+  <text x="1022" y="183" text-anchor="middle" font-size="15" font-weight="bold" fill="#831843">Reportes</text>
+  <text x="1022" y="208" text-anchor="middle" font-size="12" fill="#831843">ingresos por ciudad</text>
+  <text x="1022" y="226" text-anchor="middle" font-size="12" fill="#831843">top 5 productos</text>
+  <text x="1022" y="244" text-anchor="middle" font-size="12" fill="#831843">ingresos por mes</text>
+
+  <rect x="960" y="350" width="125" height="110" rx="10" fill="#f3f4f6" stroke="#374151" stroke-width="2"/>
+  <text x="1022" y="383" text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">Registro de</text>
+  <text x="1022" y="401" text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">tiempos</text>
+  <text x="1022" y="426" text-anchor="middle" font-size="12" fill="#111827">Ts, Tp, Ts/Tp</text>
+  <text x="1022" y="444" text-anchor="middle" font-size="12" fill="#111827">CSV y TXT</text>
+
+  <!-- Flechas -->
+  <g stroke="#374151" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M180,305 L238,305"/>
+    <path d="M410,285 C450,285 450,130 488,130"/>
+    <path d="M410,300 C450,300 450,275 488,275"/>
+    <path d="M410,310 C450,310 450,420 488,420"/>
+    <path d="M410,325 C450,325 450,565 488,565"/>
+    <path d="M690,130 C730,130 730,280 768,280"/>
+    <path d="M690,275 L768,300"/>
+    <path d="M690,420 C730,420 730,320 768,320"/>
+    <path d="M690,565 C740,565 740,340 768,340"/>
+    <path d="M920,270 C940,270 940,205 958,205"/>
+    <path d="M920,340 C940,340 940,405 958,405"/>
+  </g>
+
+  <text x="450" y="60" text-anchor="middle" font-size="12" fill="#374151">Reparto: 1 bloque de bytes por nodo</text>
+  <text x="730" y="60" text-anchor="middle" font-size="12" fill="#374151">Union: parciales (diccionarios pequenos)</text>
+  <text x="550" y="648" text-anchor="middle" font-size="13" font-weight="bold" fill="#b91c1c">SIMULACION: los nodos son procesos del SO (multiprocessing) en un solo equipo, sin red.</text>
+</svg>

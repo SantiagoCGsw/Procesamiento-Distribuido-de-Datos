@@ -1,0 +1,1001 @@
+id_venta,fecha,ciudad,producto,cantidad,precio_unitario
+1,2025-05-21,Barranquilla,Parlante,4,230567
+2,2025-12-13,Cucuta,Tablet,2,1256753
+3,2025-01-16,Medellin,Cargador,4,49219
+4,2025-01-14,Cucuta,Audifonos,4,150161
+5,2025-10-07,Pereira,Disco Duro,4,329593
+6,2025-01-04,Cali,Impresora,7,712497
+7,2025-04-21,Bucaramanga,Mouse,2,57334
+8,2025-07-03,Bucaramanga,Celular,10,1756774
+9,2025-08-24,Cucuta,Teclado,2,127371
+10,2025-05-31,Santa Marta,Monitor,6,824184
+11,2025-02-05,Bogota,Cargador,4,46923
+12,2025-04-30,Medellin,Teclado,7,131645
+13,2025-07-06,Cali,Teclado,6,118882
+14,2025-05-17,Medellin,Mouse,10,56514
+15,2025-05-06,Cali,Parlante,8,233557
+16,2025-11-24,Cucuta,Monitor,4,858591
+17,2025-01-29,Barranquilla,Parlante,1,241214
+18,2025-02-03,Barranquilla,Mouse,10,58814
+19,2025-12-02,Manizales,Disco Duro,7,308139
+20,2025-05-16,Cali,Parlante,4,247943
+21,2025-05-15,Santa Marta,Disco Duro,7,323928
+22,2025-04-23,Cali,Cargador,9,48994
+23,2025-01-25,Medellin,Impresora,3,642727
+24,2025-12-15,Pereira,Parlante,10,232999
+25,2025-11-02,Manizales,Celular,9,1758516
+26,2025-01-06,Medellin,Teclado,9,131306
+27,2025-06-24,Medellin,Teclado,5,126446
+28,2025-01-02,Cartagena,Monitor,9,838468
+29,2025-02-24,Cartagena,Tablet,9,1201844
+30,2025-07-11,Cali,Cargador,9,46989
+31,2025-11-03,Bucaramanga,Camara,8,1192069
+32,2025-07-05,Cartagena,Laptop,4,2305934
+33,2025-10-18,Medellin,Laptop,2,2370436
+34,2025-02-05,Cucuta,Disco Duro,3,319103
+35,2025-10-09,Cali,Tablet,5,1238340
+36,2025-08-05,Barranquilla,Camara,9,1181935
+37,2025-06-09,Pereira,Disco Duro,6,332152
+38,2025-08-20,Medellin,Impresora,4,755946
+39,2025-01-11,Santa Marta,Audifonos,9,136921
+40,2025-01-04,Medellin,Audifonos,1,152653
+41,2025-01-17,Bucaramanga,Audifonos,2,137022
+42,2025-12-09,Manizales,Camara,4,1042361
+43,2025-10-20,Santa Marta,Camara,8,1019109
+44,2025-07-28,Barranquilla,Audifonos,2,158539
+45,2025-07-01,Pereira,Celular,7,1857234
+46,2025-01-28,Medellin,Impresora,1,750937
+47,2025-02-25,Barranquilla,Monitor,4,941078
+48,2025-03-13,Pereira,Audifonos,3,151089
+49,2025-02-08,Manizales,Teclado,9,119103
+50,2025-10-04,Bogota,Celular,2,1638212
+51,2025-09-06,Manizales,Audifonos,4,139989
+52,2025-03-26,Pereira,Monitor,1,972440
+53,2025-08-21,Cartagena,Monitor,7,857737
+54,2025-10-12,Manizales,Disco Duro,3,349268
+55,2025-01-30,Santa Marta,Audifonos,9,143901
+56,2025-01-30,Bogota,Laptop,10,2623988
+57,2025-09-29,Cali,Impresora,1,700399
+58,2025-04-06,Medellin,Camara,10,1007625
+59,2025-05-01,Pereira,Celular,2,1863077
+60,2025-11-01,Bogota,Cargador,10,47462
+61,2025-10-26,Santa Marta,Celular,9,1770921
+62,2025-04-15,Bucaramanga,Mouse,4,65216
+63,2025-12-10,Cartagena,Teclado,8,117499
+64,2025-02-07,Bogota,Mouse,8,65148
+65,2025-02-21,Medellin,Cargador,9,54985
+66,2025-03-09,Bucaramanga,Audifonos,2,150177
+67,2025-03-22,Manizales,Audifonos,9,146086
+68,2025-12-01,Cucuta,Disco Duro,1,307361
+69,2025-06-03,Medellin,Parlante,3,265855
+70,2025-02-24,Cucuta,Teclado,3,110770
+71,2025-04-18,Bucaramanga,Teclado,4,114762
+72,2025-05-16,Cucuta,Parlante,8,256712
+73,2025-01-27,Medellin,Teclado,7,129728
+74,2025-06-20,Cali,Teclado,5,109058
+75,2025-10-10,Pereira,Tablet,9,1257895
+76,2025-12-20,Cali,Laptop,9,2305937
+77,2025-10-26,Cucuta,Laptop,3,2667298
+78,2025-06-07,Bucaramanga,Monitor,1,832940
+79,2025-05-08,Medellin,Mouse,6,56521
+80,2025-07-28,Santa Marta,Camara,3,1184510
+81,2025-04-01,Pereira,Audifonos,1,160938
+82,2025-06-20,Pereira,Tablet,4,1256775
+83,2025-12-26,Medellin,Teclado,7,111821
+84,2025-04-24,Barranquilla,Laptop,8,2679297
+85,2025-04-27,Barranquilla,Mouse,1,57662
+86,2025-06-18,Cartagena,Parlante,2,234656
+87,2025-09-18,Pereira,Teclado,9,116428
+88,2025-03-01,Cartagena,Mouse,3,65271
+89,2025-05-16,Bogota,Cargador,2,54625
+90,2025-06-10,Pereira,Cargador,10,49346
+91,2025-10-23,Barranquilla,Camara,5,1015442
+92,2025-01-01,Cucuta,Laptop,9,2604393
+93,2025-12-10,Barranquilla,Parlante,6,260971
+94,2025-12-07,Bucaramanga,Monitor,10,822595
+95,2025-03-05,Cartagena,Mouse,9,61961
+96,2025-06-17,Pereira,Teclado,5,124005
+97,2025-08-04,Pereira,Camara,3,1018003
+98,2025-07-27,Cucuta,Cargador,1,50691
+99,2025-08-09,Santa Marta,Teclado,10,114886
+100,2025-08-15,Manizales,Parlante,4,241112
+101,2025-03-28,Medellin,Camara,5,1094101
+102,2025-11-14,Bucaramanga,Camara,2,1136048
+103,2025-04-26,Barranquilla,Audifonos,3,155184
+104,2025-09-01,Santa Marta,Laptop,2,2273107
+105,2025-11-19,Santa Marta,Impresora,4,688022
+106,2025-09-11,Pereira,Disco Duro,4,332567
+107,2025-01-03,Medellin,Tablet,7,1237454
+108,2025-12-23,Cucuta,Audifonos,8,140277
+109,2025-03-04,Manizales,Laptop,3,2528703
+110,2025-10-14,Santa Marta,Impresora,6,723461
+111,2025-09-16,Pereira,Impresora,9,715771
+112,2025-09-01,Manizales,Impresora,5,755609
+113,2025-05-22,Cucuta,Audifonos,8,160196
+114,2025-08-14,Medellin,Parlante,5,236962
+115,2025-06-13,Cucuta,Audifonos,2,143151
+116,2025-07-16,Cali,Tablet,4,1116199
+117,2025-06-19,Cucuta,Celular,8,1769352
+118,2025-08-04,Pereira,Monitor,10,821208
+119,2025-10-22,Pereira,Disco Duro,8,289250
+120,2025-06-02,Pereira,Laptop,7,2721371
+121,2025-10-07,Santa Marta,Camara,4,1154453
+122,2025-08-12,Manizales,Impresora,1,660719
+123,2025-12-14,Pereira,Monitor,3,870503
+124,2025-11-15,Cucuta,Impresora,1,758736
+125,2025-12-06,Bogota,Monitor,2,916541
+126,2025-08-25,Cali,Parlante,1,246431
+127,2025-04-19,Manizales,Teclado,6,117098
+128,2025-07-14,Cartagena,Mouse,7,63135
+129,2025-08-29,Bogota,Teclado,9,128038
+130,2025-06-29,Barranquilla,Laptop,2,2749954
+131,2025-01-16,Barranquilla,Parlante,4,227013
+132,2025-05-03,Cali,Laptop,8,2560668
+133,2025-04-22,Manizales,Parlante,5,230719
+134,2025-11-07,Medellin,Mouse,3,56013
+135,2025-01-14,Cartagena,Teclado,10,110594
+136,2025-07-12,Pereira,Parlante,4,270401
+137,2025-11-18,Barranquilla,Celular,2,1833155
+138,2025-12-17,Santa Marta,Disco Duro,2,337439
+139,2025-06-27,Cucuta,Cargador,7,52826
+140,2025-09-17,Bucaramanga,Parlante,1,243529
+141,2025-02-24,Pereira,Monitor,6,958020
+142,2025-08-24,Cali,Parlante,7,269579
+143,2025-11-30,Cartagena,Tablet,10,1256111
+144,2025-08-27,Pereira,Camara,10,1160421
+145,2025-05-06,Medellin,Teclado,5,115735
+146,2025-08-26,Santa Marta,Impresora,10,664141
+147,2025-01-15,Manizales,Parlante,6,243949
+148,2025-07-01,Cartagena,Tablet,6,1197012
+149,2025-12-26,Cartagena,Teclado,9,129128
+150,2025-04-08,Medellin,Laptop,4,2508314
+151,2025-10-12,Barranquilla,Disco Duro,8,314011
+152,2025-08-18,Bogota,Parlante,2,260592
+153,2025-12-21,Barranquilla,Teclado,5,113318
+154,2025-08-31,Cucuta,Parlante,9,254078
+155,2025-10-09,Bucaramanga,Mouse,6,59106
+156,2025-06-06,Cartagena,Disco Duro,4,317040
+157,2025-06-11,Medellin,Celular,9,1879662
+158,2025-04-21,Manizales,Disco Duro,5,299850
+159,2025-09-26,Santa Marta,Disco Duro,5,325734
+160,2025-06-01,Barranquilla,Celular,6,1919746
+161,2025-12-29,Cucuta,Tablet,3,1152544
+162,2025-01-28,Cucuta,Teclado,5,109092
+163,2025-11-23,Manizales,Disco Duro,2,348422
+164,2025-08-29,Manizales,Laptop,8,2537032
+165,2025-01-27,Cartagena,Mouse,8,56212
+166,2025-07-25,Manizales,Celular,2,1915962
+167,2025-01-28,Cali,Cargador,3,51294
+168,2025-02-13,Barranquilla,Cargador,2,54491
+169,2025-11-07,Santa Marta,Camara,10,1158178
+170,2025-07-14,Manizales,Audifonos,8,158271
+171,2025-08-08,Cartagena,Teclado,10,128644
+172,2025-02-20,Barranquilla,Cargador,4,45602
+173,2025-03-22,Barranquilla,Teclado,3,123850
+174,2025-01-02,Pereira,Camara,8,1006514
+175,2025-05-30,Bogota,Disco Duro,4,326004
+176,2025-12-26,Manizales,Teclado,2,124967
+177,2025-05-16,Santa Marta,Parlante,4,236671
+178,2025-04-26,Cali,Monitor,5,830660
+179,2025-03-26,Cartagena,Tablet,10,1097138
+180,2025-05-28,Manizales,Disco Duro,2,340751
+181,2025-12-25,Pereira,Impresora,5,726415
+182,2025-08-13,Medellin,Camara,10,1108796
+183,2025-06-15,Santa Marta,Laptop,5,2694711
+184,2025-12-12,Santa Marta,Laptop,10,2295663
+185,2025-12-11,Cartagena,Laptop,10,2749786
+186,2025-03-31,Manizales,Laptop,9,2631555
+187,2025-05-23,Cali,Parlante,10,247111
+188,2025-09-09,Medellin,Monitor,8,924261
+189,2025-06-14,Medellin,Mouse,3,58900
+190,2025-09-11,Cartagena,Mouse,7,58940
+191,2025-02-15,Bucaramanga,Camara,5,998073
+192,2025-07-26,Cucuta,Mouse,1,55391
+193,2025-08-25,Pereira,Parlante,1,268468
+194,2025-11-15,Manizales,Audifonos,8,150553
+195,2025-10-09,Cali,Laptop,5,2351779
+196,2025-09-06,Medellin,Impresora,1,753319
+197,2025-05-03,Cali,Parlante,5,255444
+198,2025-07-28,Medellin,Camara,4,993008
+199,2025-03-02,Cali,Celular,8,1786121
+200,2025-12-28,Cartagena,Disco Duro,7,306679
+201,2025-05-05,Manizales,Impresora,9,767234
+202,2025-11-03,Cucuta,Tablet,3,1172061
+203,2025-08-01,Bucaramanga,Celular,9,1719449
+204,2025-05-25,Cartagena,Teclado,10,127693
+205,2025-09-08,Cali,Cargador,8,54989
+206,2025-06-20,Cucuta,Camara,9,1096555
+207,2025-06-14,Barranquilla,Monitor,4,891962
+208,2025-07-30,Bogota,Cargador,6,48830
+209,2025-07-15,Pereira,Disco Duro,3,318270
+210,2025-03-06,Cucuta,Impresora,10,765075
+211,2025-08-14,Medellin,Mouse,9,64436
+212,2025-03-15,Pereira,Impresora,3,632149
+213,2025-05-16,Bucaramanga,Celular,10,1789017
+214,2025-02-11,Bucaramanga,Disco Duro,9,313439
+215,2025-11-17,Manizales,Monitor,9,981745
+216,2025-05-01,Cartagena,Laptop,4,2558730
+217,2025-02-20,Medellin,Disco Duro,8,293784
+218,2025-01-15,Bogota,Tablet,6,1246560
+219,2025-07-11,Pereira,Laptop,3,2396684
+220,2025-10-17,Cali,Audifonos,3,150935
+221,2025-07-15,Santa Marta,Tablet,4,1098952
+222,2025-03-15,Barranquilla,Impresora,8,757796
+223,2025-05-11,Bogota,Parlante,8,237699
+224,2025-03-22,Medellin,Teclado,8,124263
+225,2025-06-03,Pereira,Mouse,5,65852
+226,2025-04-12,Pereira,Impresora,8,748343
+227,2025-10-20,Bucaramanga,Celular,10,1705394
+228,2025-06-01,Bogota,Teclado,7,131825
+229,2025-12-18,Bogota,Teclado,10,108194
+230,2025-05-27,Barranquilla,Disco Duro,10,319791
+231,2025-04-08,Santa Marta,Mouse,5,56628
+232,2025-12-04,Cali,Parlante,2,262779
+233,2025-06-08,Manizales,Parlante,1,257317
+234,2025-03-09,Medellin,Cargador,5,48649
+235,2025-03-31,Barranquilla,Mouse,3,62970
+236,2025-07-07,Cucuta,Camara,9,1182821
+237,2025-05-12,Manizales,Teclado,5,127931
+238,2025-02-28,Manizales,Disco Duro,2,343705
+239,2025-04-26,Pereira,Tablet,9,1260996
+240,2025-07-22,Bogota,Mouse,5,55084
+241,2025-07-08,Cartagena,Camara,10,1017190
+242,2025-07-10,Medellin,Monitor,4,958035
+243,2025-10-15,Bucaramanga,Impresora,10,633503
+244,2025-11-22,Manizales,Audifonos,5,154430
+245,2025-03-13,Bogota,Parlante,1,245415
+246,2025-03-01,Medellin,Teclado,4,131902
+247,2025-08-21,Bucaramanga,Camara,9,1019846
+248,2025-03-21,Pereira,Monitor,2,915721
+249,2025-05-24,Bogota,Impresora,6,716191
+250,2025-05-01,Bucaramanga,Audifonos,2,148301
+251,2025-11-27,Bucaramanga,Parlante,1,243367
+252,2025-03-04,Manizales,Monitor,2,859659
+253,2025-11-24,Santa Marta,Parlante,1,235605
+254,2025-05-05,Cali,Laptop,10,2643397
+255,2025-10-11,Barranquilla,Audifonos,10,137058
+256,2025-04-30,Bucaramanga,Audifonos,3,159392
+257,2025-03-16,Cali,Cargador,9,45028
+258,2025-02-26,Bogota,Teclado,3,127164
+259,2025-05-02,Santa Marta,Laptop,6,2429121
+260,2025-01-27,Cali,Laptop,7,2337123
+261,2025-02-02,Manizales,Camara,8,1015003
+262,2025-02-25,Manizales,Mouse,9,60159
+263,2025-01-23,Cucuta,Audifonos,5,163362
+264,2025-01-16,Bogota,Impresora,8,720068
+265,2025-02-25,Manizales,Monitor,8,886729
+266,2025-06-14,Santa Marta,Celular,3,1943736
+267,2025-11-16,Santa Marta,Celular,9,1665429
+268,2025-11-02,Cucuta,Disco Duro,5,308812
+269,2025-08-09,Medellin,Impresora,2,700777
+270,2025-10-10,Barranquilla,Parlante,7,257546
+271,2025-07-31,Bucaramanga,Impresora,8,754333
+272,2025-02-18,Bucaramanga,Monitor,7,884878
+273,2025-07-11,Cali,Mouse,8,61981
+274,2025-02-13,Medellin,Celular,7,1652841
+275,2025-07-10,Cali,Celular,9,1888052
+276,2025-10-15,Cucuta,Laptop,6,2543233
+277,2025-07-01,Pereira,Parlante,1,231112
+278,2025-06-30,Medellin,Teclado,10,122410
+279,2025-12-03,Manizales,Camara,4,1036803
+280,2025-10-12,Bucaramanga,Celular,2,1746041
+281,2025-08-08,Cucuta,Teclado,10,121778
+282,2025-10-13,Bogota,Cargador,10,51750
+283,2025-05-17,Bogota,Parlante,3,266473
+284,2025-06-08,Bucaramanga,Teclado,6,124865
+285,2025-03-15,Santa Marta,Laptop,7,2340703
+286,2025-11-21,Bogota,Celular,2,1671075
+287,2025-07-12,Pereira,Disco Duro,8,321951
+288,2025-06-09,Bucaramanga,Mouse,10,55889
+289,2025-01-27,Cali,Cargador,3,45850
+290,2025-02-11,Cartagena,Cargador,8,45498
+291,2025-11-07,Manizales,Parlante,7,246201
+292,2025-09-20,Medellin,Teclado,6,113174
+293,2025-12-14,Santa Marta,Monitor,8,829960
+294,2025-01-24,Barranquilla,Camara,7,1136769
+295,2025-04-15,Cartagena,Cargador,4,45548
+296,2025-05-29,Bucaramanga,Tablet,2,1263399
+297,2025-08-09,Cali,Laptop,3,2498693
+298,2025-04-28,Cucuta,Monitor,9,905865
+299,2025-02-06,Pereira,Parlante,1,265310
+300,2025-02-09,Bucaramanga,Monitor,10,813373
+301,2025-12-30,Pereira,Monitor,5,913212
+302,2025-06-16,Cali,Celular,10,1765812
+303,2025-07-05,Medellin,Impresora,7,746484
+304,2025-10-29,Pereira,Celular,9,1707594
+305,2025-06-08,Bucaramanga,Celular,4,1762476
+306,2025-02-09,Cucuta,Mouse,2,63349
+307,2025-06-28,Bucaramanga,Camara,3,1102189
+308,2025-05-12,Barranquilla,Audifonos,3,138084
+309,2025-12-02,Medellin,Cargador,3,46529
+310,2025-10-16,Santa Marta,Parlante,8,249706
+311,2025-10-17,Santa Marta,Parlante,6,271208
+312,2025-08-14,Medellin,Parlante,8,240807
+313,2025-05-21,Santa Marta,Impresora,1,718394
+314,2025-06-08,Manizales,Mouse,8,60088
+315,2025-05-27,Medellin,Laptop,2,2278445
+316,2025-07-16,Manizales,Cargador,10,50941
+317,2025-01-22,Manizales,Camara,10,1199931
+318,2025-11-06,Manizales,Parlante,9,234412
+319,2025-08-19,Medellin,Tablet,6,1309853
+320,2025-11-27,Cali,Disco Duro,1,293397
+321,2025-08-13,Cucuta,Audifonos,9,156229
+322,2025-07-10,Cartagena,Cargador,7,46587
+323,2025-12-14,Santa Marta,Monitor,1,949404
+324,2025-02-03,Bucaramanga,Parlante,2,257365
+325,2025-05-26,Cartagena,Camara,10,1139243
+326,2025-10-26,Cali,Tablet,6,1160007
+327,2025-12-24,Pereira,Teclado,3,131225
+328,2025-02-13,Cartagena,Cargador,9,52088
+329,2025-06-18,Cali,Monitor,9,925829
+330,2025-08-05,Cucuta,Celular,6,1852569
+331,2025-04-03,Barranquilla,Laptop,6,2431299
+332,2025-03-12,Cali,Impresora,2,656881
+333,2025-02-21,Cucuta,Teclado,9,128266
+334,2025-01-20,Bucaramanga,Disco Duro,10,344556
+335,2025-03-20,Cali,Tablet,3,1223339
+336,2025-03-26,Manizales,Disco Duro,1,337350
+337,2025-05-02,Manizales,Monitor,10,875574
+338,2025-08-18,Barranquilla,Teclado,9,126057
+339,2025-08-29,Barranquilla,Audifonos,6,144284
+340,2025-08-14,Manizales,Parlante,5,272357
+341,2025-08-03,Cali,Monitor,4,900523
+342,2025-05-09,Bogota,Cargador,8,46384
+343,2025-02-22,Cucuta,Mouse,2,60654
+344,2025-03-24,Cartagena,Teclado,8,110013
+345,2025-08-12,Medellin,Camara,4,1022417
+346,2025-01-14,Pereira,Impresora,1,753848
+347,2025-05-01,Pereira,Monitor,2,900361
+348,2025-06-13,Medellin,Mouse,6,56694
+349,2025-05-27,Manizales,Tablet,3,1113024
+350,2025-11-12,Bogota,Disco Duro,2,318023
+351,2025-03-18,Cucuta,Laptop,10,2377962
+352,2025-05-28,Barranquilla,Camara,5,1083116
+353,2025-08-03,Santa Marta,Celular,8,1637190
+354,2025-09-13,Santa Marta,Celular,9,1659909
+355,2025-10-22,Barranquilla,Laptop,3,2565977
+356,2025-11-11,Bucaramanga,Teclado,4,118302
+357,2025-12-07,Medellin,Cargador,9,49166
+358,2025-09-27,Cucuta,Mouse,9,54812
+359,2025-07-19,Manizales,Camara,1,1111913
+360,2025-07-11,Cartagena,Parlante,1,244344
+361,2025-06-26,Barranquilla,Mouse,2,63462
+362,2025-06-20,Cali,Cargador,1,52352
+363,2025-11-26,Cali,Mouse,8,60552
+364,2025-04-04,Cali,Disco Duro,2,318626
+365,2025-08-23,Bogota,Disco Duro,5,337676
+366,2025-04-13,Bogota,Audifonos,6,136314
+367,2025-10-06,Manizales,Teclado,5,120369
+368,2025-04-08,Cartagena,Laptop,6,2626645
+369,2025-06-19,Cartagena,Laptop,2,2682899
+370,2025-07-24,Manizales,Mouse,7,59243
+371,2025-09-12,Manizales,Mouse,6,65685
+372,2025-02-12,Pereira,Camara,2,1048679
+373,2025-04-03,Cucuta,Monitor,5,918442
+374,2025-06-17,Cartagena,Mouse,5,55231
+375,2025-08-07,Cali,Impresora,8,714367
+376,2025-06-30,Santa Marta,Mouse,7,59366
+377,2025-01-30,Medellin,Teclado,7,123347
+378,2025-12-14,Cali,Mouse,1,60157
+379,2025-12-14,Manizales,Tablet,1,1283681
+380,2025-11-27,Bucaramanga,Tablet,6,1096136
+381,2025-01-17,Santa Marta,Monitor,3,980904
+382,2025-07-09,Bucaramanga,Parlante,8,247496
+383,2025-09-29,Bucaramanga,Celular,7,1826612
+384,2025-05-08,Medellin,Mouse,1,61795
+385,2025-09-23,Pereira,Disco Duro,9,299907
+386,2025-05-14,Manizales,Celular,4,1714240
+387,2025-09-09,Barranquilla,Cargador,2,47856
+388,2025-08-20,Cali,Tablet,8,1284678
+389,2025-06-13,Bucaramanga,Celular,2,1911785
+390,2025-06-03,Cali,Camara,3,1109278
+391,2025-03-04,Barranquilla,Mouse,3,60105
+392,2025-01-14,Bucaramanga,Audifonos,9,158711
+393,2025-10-10,Cali,Cargador,10,48689
+394,2025-07-23,Manizales,Celular,9,1643669
+395,2025-10-22,Medellin,Monitor,3,948450
+396,2025-08-19,Manizales,Mouse,9,61708
+397,2025-10-10,Santa Marta,Mouse,3,55540
+398,2025-01-29,Medellin,Tablet,9,1183828
+399,2025-03-24,Bucaramanga,Tablet,4,1152990
+400,2025-09-23,Cartagena,Mouse,2,65370
+401,2025-10-10,Cartagena,Teclado,3,112711
+402,2025-10-01,Medellin,Parlante,9,240141
+403,2025-10-25,Cali,Parlante,3,233432
+404,2025-11-06,Bucaramanga,Parlante,10,256224
+405,2025-01-15,Medellin,Laptop,1,2662618
+406,2025-05-16,Barranquilla,Parlante,10,263551
+407,2025-01-16,Manizales,Monitor,9,921260
+408,2025-06-04,Manizales,Teclado,4,123406
+409,2025-08-21,Medellin,Parlante,1,245305
+410,2025-09-05,Manizales,Tablet,4,1185505
+411,2025-06-10,Bucaramanga,Mouse,6,61280
+412,2025-07-09,Cucuta,Monitor,9,833538
+413,2025-08-27,Medellin,Celular,5,1734882
+414,2025-02-19,Bogota,Impresora,5,664709
+415,2025-08-03,Barranquilla,Monitor,3,965549
+416,2025-06-10,Barranquilla,Mouse,3,65205
+417,2025-08-28,Manizales,Impresora,5,769436
+418,2025-07-21,Cucuta,Impresora,8,633245
+419,2025-06-30,Bogota,Audifonos,1,141454
+420,2025-12-01,Manizales,Teclado,5,119877
+421,2025-02-25,Pereira,Camara,3,991799
+422,2025-07-26,Bucaramanga,Teclado,1,125460
+423,2025-10-15,Barranquilla,Monitor,6,819208
+424,2025-07-17,Cucuta,Camara,8,1053492
+425,2025-11-16,Santa Marta,Camara,2,1051539
+426,2025-07-21,Bucaramanga,Tablet,6,1314020
+427,2025-03-15,Barranquilla,Camara,10,1196569
+428,2025-01-21,Bogota,Camara,1,1078305
+429,2025-08-31,Cucuta,Tablet,8,1251262
+430,2025-09-21,Cali,Tablet,6,1225503
+431,2025-07-21,Santa Marta,Cargador,5,48185
+432,2025-09-18,Cucuta,Cargador,8,48364
+433,2025-09-01,Bogota,Disco Duro,6,324027
+434,2025-08-02,Santa Marta,Mouse,5,62086
+435,2025-11-19,Bogota,Disco Duro,10,343814
+436,2025-12-02,Santa Marta,Impresora,10,667174
+437,2025-10-26,Manizales,Audifonos,3,156642
+438,2025-11-14,Pereira,Camara,3,1128386
+439,2025-10-21,Medellin,Parlante,4,237110
+440,2025-08-03,Cali,Laptop,7,2470519
+441,2025-09-14,Santa Marta,Disco Duro,8,301049
+442,2025-12-28,Cali,Disco Duro,9,334554
+443,2025-12-06,Manizales,Audifonos,9,151827
+444,2025-03-30,Manizales,Monitor,9,866475
+445,2025-12-13,Cartagena,Mouse,10,60555
+446,2025-05-07,Cartagena,Impresora,9,656917
+447,2025-06-02,Cartagena,Teclado,4,113397
+448,2025-06-12,Manizales,Disco Duro,6,333119
+449,2025-05-21,Cartagena,Camara,2,1195414
+450,2025-07-14,Pereira,Cargador,6,51766
+451,2025-05-28,Medellin,Tablet,6,1149709
+452,2025-09-03,Barranquilla,Impresora,4,721836
+453,2025-10-15,Cartagena,Camara,3,1049649
+454,2025-10-28,Barranquilla,Celular,4,1841644
+455,2025-09-29,Barranquilla,Laptop,4,2584917
+456,2025-06-19,Manizales,Laptop,2,2300099
+457,2025-01-03,Cucuta,Parlante,3,263538
+458,2025-09-01,Manizales,Monitor,4,927521
+459,2025-11-27,Bogota,Teclado,2,115708
+460,2025-10-01,Bogota,Parlante,3,253707
+461,2025-04-01,Bogota,Monitor,7,968804
+462,2025-05-29,Bogota,Impresora,1,656084
+463,2025-02-24,Bucaramanga,Teclado,5,121631
+464,2025-10-06,Cucuta,Impresora,8,768474
+465,2025-08-28,Cartagena,Tablet,4,1284254
+466,2025-08-23,Cartagena,Celular,3,1739046
+467,2025-06-01,Santa Marta,Laptop,4,2618309
+468,2025-11-24,Pereira,Tablet,7,1226629
+469,2025-07-25,Medellin,Camara,3,1062144
+470,2025-05-08,Bogota,Tablet,5,1194589
+471,2025-05-17,Bucaramanga,Monitor,5,852394
+472,2025-01-06,Cartagena,Cargador,6,52229
+473,2025-12-08,Medellin,Disco Duro,8,303123
+474,2025-12-18,Cucuta,Teclado,5,111833
+475,2025-06-01,Bucaramanga,Disco Duro,10,295515
+476,2025-03-10,Manizales,Audifonos,3,141574
+477,2025-11-07,Bucaramanga,Impresora,7,734683
+478,2025-08-30,Cucuta,Disco Duro,4,323151
+479,2025-11-02,Medellin,Audifonos,9,155410
+480,2025-07-05,Medellin,Impresora,10,703944
+481,2025-10-08,Cucuta,Celular,4,1642233
+482,2025-03-26,Bucaramanga,Cargador,9,50367
+483,2025-04-16,Santa Marta,Impresora,8,646274
+484,2025-08-17,Bogota,Celular,8,1943600
+485,2025-08-22,Santa Marta,Tablet,1,1203179
+486,2025-06-07,Bogota,Camara,7,1091723
+487,2025-04-22,Santa Marta,Teclado,2,127595
+488,2025-12-25,Medellin,Laptop,9,2461849
+489,2025-02-05,Manizales,Laptop,1,2717291
+490,2025-03-11,Pereira,Teclado,6,117813
+491,2025-07-13,Pereira,Monitor,2,890737
+492,2025-10-04,Cali,Parlante,6,273207
+493,2025-10-03,Pereira,Celular,9,1684251
+494,2025-04-25,Bogota,Tablet,1,1254686
+495,2025-10-06,Pereira,Teclado,9,119112
+496,2025-05-07,Manizales,Monitor,6,958205
+497,2025-02-27,Bogota,Tablet,7,1146156
+498,2025-01-09,Barranquilla,Cargador,4,52661
+499,2025-01-18,Manizales,Celular,10,1656323
+500,2025-01-25,Barranquilla,Parlante,1,260164
+501,2025-10-04,Barranquilla,Monitor,1,889013
+502,2025-05-29,Barranquilla,Tablet,10,1200935
+503,2025-12-11,Bucaramanga,Mouse,4,60930
+504,2025-12-05,Cucuta,Teclado,4,129030
+505,2025-02-01,Cucuta,Monitor,10,864090
+506,2025-11-17,Pereira,Disco Duro,9,346341
+507,2025-06-26,Pereira,Impresora,9,636564
+508,2025-07-29,Cali,Mouse,5,62356
+509,2025-10-03,Manizales,Monitor,4,843098
+510,2025-12-29,Cali,Audifonos,8,144022
+511,2025-08-02,Cucuta,Laptop,9,2531193
+512,2025-05-11,Barranquilla,Tablet,6,1173221
+513,2025-08-19,Bucaramanga,Parlante,2,228954
+514,2025-04-08,Bogota,Camara,5,1149409
+515,2025-11-05,Bogota,Monitor,2,931261
+516,2025-10-28,Cucuta,Audifonos,4,159140
+517,2025-06-20,Cartagena,Impresora,1,659244
+518,2025-03-02,Manizales,Audifonos,4,163115
+519,2025-04-15,Pereira,Disco Duro,4,326682
+520,2025-05-25,Pereira,Camara,8,1060755
+521,2025-06-07,Cartagena,Camara,6,1132719
+522,2025-08-27,Medellin,Camara,8,1184219
+523,2025-07-09,Bucaramanga,Mouse,7,64972
+524,2025-04-24,Cali,Laptop,1,2531262
+525,2025-10-27,Santa Marta,Teclado,7,121279
+526,2025-06-18,Barranquilla,Teclado,7,111658
+527,2025-09-13,Cucuta,Cargador,6,53334
+528,2025-09-08,Manizales,Teclado,8,126321
+529,2025-06-30,Cali,Tablet,3,1255865
+530,2025-04-05,Cucuta,Disco Duro,1,322979
+531,2025-02-08,Bogota,Camara,1,997441
+532,2025-11-19,Barranquilla,Monitor,2,834748
+533,2025-04-22,Cucuta,Disco Duro,8,297666
+534,2025-11-23,Santa Marta,Mouse,8,54725
+535,2025-01-04,Cucuta,Parlante,9,249393
+536,2025-09-29,Cartagena,Monitor,9,812133
+537,2025-12-24,Pereira,Teclado,3,108411
+538,2025-09-26,Cali,Celular,4,1950498
+539,2025-05-10,Bucaramanga,Audifonos,5,153593
+540,2025-07-27,Manizales,Monitor,10,824223
+541,2025-04-26,Cartagena,Audifonos,2,164707
+542,2025-11-29,Bogota,Parlante,2,274584
+543,2025-10-10,Manizales,Monitor,1,878268
+544,2025-03-29,Medellin,Parlante,8,225473
+545,2025-06-19,Santa Marta,Monitor,2,926083
+546,2025-04-28,Barranquilla,Camara,10,1192213
+547,2025-02-08,Cartagena,Impresora,9,667953
+548,2025-04-02,Bucaramanga,Cargador,1,51581
+549,2025-12-31,Pereira,Audifonos,2,152611
+550,2025-05-04,Santa Marta,Teclado,7,111899
+551,2025-06-19,Pereira,Parlante,3,269826
+552,2025-09-14,Bucaramanga,Disco Duro,1,334346
+553,2025-02-08,Bucaramanga,Celular,10,1777352
+554,2025-07-23,Bucaramanga,Cargador,1,54549
+555,2025-08-19,Manizales,Parlante,4,238666
+556,2025-07-12,Pereira,Mouse,3,60636
+557,2025-07-14,Medellin,Parlante,10,254294
+558,2025-02-07,Medellin,Teclado,5,127153
+559,2025-11-21,Cali,Tablet,7,1171200
+560,2025-02-16,Bogota,Mouse,5,58328
+561,2025-05-19,Medellin,Impresora,3,680388
+562,2025-08-18,Cucuta,Celular,9,1687461
+563,2025-01-14,Medellin,Camara,6,1079770
+564,2025-11-03,Bucaramanga,Camara,7,1010474
+565,2025-07-18,Medellin,Laptop,9,2395924
+566,2025-03-28,Pereira,Audifonos,3,152159
+567,2025-05-18,Manizales,Tablet,3,1144541
+568,2025-05-22,Pereira,Celular,5,1680195
+569,2025-07-04,Cartagena,Impresora,4,739573
+570,2025-11-01,Santa Marta,Disco Duro,4,328002
+571,2025-06-05,Bogota,Impresora,7,644976
+572,2025-07-14,Bucaramanga,Mouse,8,64099
+573,2025-11-30,Santa Marta,Mouse,3,59167
+574,2025-12-22,Barranquilla,Teclado,8,115696
+575,2025-07-23,Bucaramanga,Mouse,5,56132
+576,2025-09-09,Santa Marta,Disco Duro,4,332477
+577,2025-07-21,Bucaramanga,Mouse,2,58513
+578,2025-10-07,Cali,Cargador,9,46998
+579,2025-08-25,Barranquilla,Laptop,8,2726502
+580,2025-02-05,Pereira,Teclado,8,127951
+581,2025-05-04,Cartagena,Tablet,3,1232001
+582,2025-07-13,Medellin,Disco Duro,8,315080
+583,2025-07-25,Cucuta,Cargador,9,49792
+584,2025-01-19,Bucaramanga,Disco Duro,9,314771
+585,2025-02-13,Medellin,Cargador,4,51382
+586,2025-03-27,Santa Marta,Parlante,1,258235
+587,2025-12-13,Pereira,Cargador,6,54836
+588,2025-02-20,Cartagena,Monitor,4,829070
+589,2025-10-13,Santa Marta,Camara,10,1154308
+590,2025-07-20,Manizales,Audifonos,10,148373
+591,2025-06-26,Bogota,Disco Duro,8,320030
+592,2025-02-13,Medellin,Celular,3,1726356
+593,2025-08-22,Barranquilla,Mouse,9,57743
+594,2025-02-19,Manizales,Impresora,8,678762
+595,2025-01-23,Medellin,Mouse,1,54806
+596,2025-12-13,Cali,Mouse,4,61776
+597,2025-03-23,Bucaramanga,Camara,9,1028380
+598,2025-04-29,Pereira,Monitor,3,982523
+599,2025-08-10,Pereira,Tablet,1,1233715
+600,2025-04-12,Manizales,Disco Duro,10,327303
+601,2025-12-27,Barranquilla,Monitor,4,879990
+602,2025-02-02,Santa Marta,Teclado,2,126056
+603,2025-06-16,Barranquilla,Camara,8,1031131
+604,2025-09-08,Cucuta,Celular,6,1714447
+605,2025-07-20,Santa Marta,Cargador,2,48886
+606,2025-08-23,Santa Marta,Mouse,3,58224
+607,2025-06-02,Santa Marta,Parlante,10,260299
+608,2025-06-10,Medellin,Celular,4,1861960
+609,2025-07-11,Cali,Teclado,9,110807
+610,2025-03-12,Santa Marta,Monitor,7,885283
+611,2025-11-22,Cucuta,Monitor,3,843436
+612,2025-05-28,Cali,Camara,3,1026710
+613,2025-11-14,Bogota,Mouse,6,64104
+614,2025-04-10,Pereira,Laptop,9,2492304
+615,2025-07-29,Manizales,Camara,7,1133675
+616,2025-09-08,Cali,Disco Duro,2,341753
+617,2025-04-23,Cartagena,Cargador,1,45309
+618,2025-05-28,Cali,Teclado,8,113396
+619,2025-09-11,Cucuta,Cargador,9,52425
+620,2025-05-18,Cucuta,Celular,6,1826177
+621,2025-01-22,Manizales,Camara,9,1170974
+622,2025-02-22,Barranquilla,Audifonos,5,164693
+623,2025-06-28,Medellin,Laptop,8,2474866
+624,2025-05-02,Barranquilla,Celular,10,1899227
+625,2025-12-30,Santa Marta,Disco Duro,7,310440
+626,2025-04-16,Barranquilla,Tablet,1,1227876
+627,2025-05-24,Santa Marta,Cargador,9,48508
+628,2025-12-27,Cartagena,Tablet,5,1157677
+629,2025-09-21,Medellin,Cargador,3,47673
+630,2025-05-22,Cali,Monitor,3,975378
+631,2025-06-14,Barranquilla,Audifonos,7,139387
+632,2025-11-20,Cartagena,Impresora,7,649904
+633,2025-11-21,Medellin,Monitor,7,891359
+634,2025-12-22,Bucaramanga,Camara,8,1154957
+635,2025-01-02,Medellin,Impresora,8,675820
+636,2025-07-03,Medellin,Parlante,9,258207
+637,2025-08-08,Barranquilla,Monitor,8,849209
+638,2025-05-26,Bucaramanga,Teclado,9,115749
+639,2025-09-06,Bucaramanga,Cargador,1,46306
+640,2025-08-24,Bogota,Laptop,2,2299787
+641,2025-01-01,Pereira,Tablet,4,1185909
+642,2025-11-29,Cartagena,Disco Duro,3,346202
+643,2025-07-04,Cartagena,Teclado,2,110240
+644,2025-11-29,Cali,Mouse,1,61974
+645,2025-12-25,Barranquilla,Monitor,7,922609
+646,2025-02-18,Bogota,Parlante,4,229560
+647,2025-10-31,Barranquilla,Impresora,9,640911
+648,2025-01-05,Bucaramanga,Parlante,2,247253
+649,2025-09-02,Medellin,Monitor,4,934926
+650,2025-02-22,Medellin,Monitor,6,826080
+651,2025-03-12,Pereira,Mouse,3,64572
+652,2025-03-15,Medellin,Parlante,9,274647
+653,2025-11-29,Cali,Cargador,8,45085
+654,2025-11-18,Cali,Mouse,7,62669
+655,2025-04-22,Medellin,Cargador,2,51866
+656,2025-10-29,Pereira,Tablet,6,1260587
+657,2025-03-13,Barranquilla,Monitor,5,866611
+658,2025-10-11,Santa Marta,Parlante,10,229212
+659,2025-12-20,Bogota,Disco Duro,5,326886
+660,2025-09-18,Barranquilla,Audifonos,7,150532
+661,2025-05-03,Manizales,Teclado,7,123508
+662,2025-11-23,Santa Marta,Celular,2,1706789
+663,2025-01-07,Bucaramanga,Camara,6,1185519
+664,2025-10-19,Pereira,Tablet,6,1172841
+665,2025-08-30,Medellin,Camara,1,1140247
+666,2025-05-15,Barranquilla,Cargador,1,45675
+667,2025-07-23,Cucuta,Laptop,5,2724340
+668,2025-08-01,Pereira,Parlante,7,260631
+669,2025-10-03,Santa Marta,Celular,3,1850593
+670,2025-02-10,Cucuta,Teclado,4,110006
+671,2025-07-20,Santa Marta,Tablet,2,1208734
+672,2025-05-03,Bogota,Teclado,4,124768
+673,2025-03-01,Manizales,Celular,10,1952866
+674,2025-12-08,Cali,Cargador,2,45550
+675,2025-12-26,Bogota,Laptop,3,2603950
+676,2025-09-25,Cucuta,Impresora,5,763422
+677,2025-05-18,Medellin,Tablet,1,1169249
+678,2025-05-20,Cucuta,Mouse,2,63685
+679,2025-10-23,Medellin,Teclado,8,125096
+680,2025-01-29,Manizales,Impresora,10,701509
+681,2025-05-11,Medellin,Tablet,10,1168245
+682,2025-04-27,Cucuta,Parlante,1,261139
+683,2025-01-07,Barranquilla,Laptop,1,2679345
+684,2025-03-18,Cali,Impresora,1,680957
+685,2025-12-02,Pereira,Camara,4,1166685
+686,2025-06-13,Cartagena,Mouse,2,56979
+687,2025-09-15,Bogota,Cargador,3,48728
+688,2025-01-24,Pereira,Audifonos,2,159130
+689,2025-06-09,Bucaramanga,Impresora,2,751245
+690,2025-07-08,Barranquilla,Camara,5,1090484
+691,2025-11-15,Barranquilla,Cargador,8,52845
+692,2025-09-10,Barranquilla,Mouse,9,61100
+693,2025-07-29,Bogota,Audifonos,4,139517
+694,2025-12-22,Bogota,Camara,6,1066213
+695,2025-07-12,Cartagena,Laptop,2,2629465
+696,2025-05-02,Pereira,Audifonos,8,150894
+697,2025-03-14,Cartagena,Laptop,2,2736280
+698,2025-09-24,Pereira,Laptop,6,2710637
+699,2025-02-13,Santa Marta,Impresora,2,766438
+700,2025-07-21,Medellin,Camara,10,1019373
+701,2025-12-06,Cali,Cargador,4,45623
+702,2025-06-11,Pereira,Teclado,6,114264
+703,2025-04-30,Medellin,Mouse,4,59433
+704,2025-10-27,Medellin,Tablet,3,1267185
+705,2025-08-27,Bucaramanga,Celular,7,1679175
+706,2025-04-17,Manizales,Celular,5,1812933
+707,2025-03-03,Medellin,Impresora,3,667101
+708,2025-12-27,Santa Marta,Parlante,1,240211
+709,2025-06-17,Cali,Audifonos,2,160078
+710,2025-07-02,Pereira,Disco Duro,9,303886
+711,2025-05-14,Cali,Laptop,1,2588592
+712,2025-10-12,Cucuta,Monitor,4,963828
+713,2025-03-13,Medellin,Celular,1,1786336
+714,2025-04-24,Cali,Laptop,4,2665186
+715,2025-11-19,Medellin,Monitor,10,877003
+716,2025-02-08,Bogota,Cargador,2,47588
+717,2025-08-16,Cali,Audifonos,2,162075
+718,2025-08-25,Bogota,Mouse,3,55470
+719,2025-07-22,Manizales,Cargador,1,49332
+720,2025-03-30,Bucaramanga,Monitor,4,932978
+721,2025-08-17,Cali,Tablet,1,1145996
+722,2025-05-06,Cartagena,Cargador,8,51192
+723,2025-09-03,Bogota,Monitor,2,968900
+724,2025-08-03,Barranquilla,Teclado,9,117192
+725,2025-10-06,Bogota,Audifonos,7,153923
+726,2025-10-06,Manizales,Disco Duro,6,310983
+727,2025-07-18,Cartagena,Cargador,3,50024
+728,2025-04-23,Bogota,Laptop,5,2409439
+729,2025-08-30,Cucuta,Laptop,6,2654327
+730,2025-03-23,Medellin,Cargador,4,54996
+731,2025-10-01,Bogota,Parlante,4,237058
+732,2025-07-18,Bucaramanga,Cargador,3,53465
+733,2025-06-12,Bucaramanga,Tablet,10,1136772
+734,2025-06-30,Santa Marta,Laptop,10,2601726
+735,2025-04-07,Manizales,Tablet,9,1215146
+736,2025-01-20,Medellin,Teclado,1,112213
+737,2025-01-11,Cucuta,Audifonos,8,153050
+738,2025-11-11,Barranquilla,Laptop,3,2415867
+739,2025-06-15,Bogota,Mouse,1,62603
+740,2025-03-14,Medellin,Tablet,9,1220786
+741,2025-07-11,Pereira,Mouse,10,65527
+742,2025-06-15,Cali,Celular,3,1741162
+743,2025-11-24,Manizales,Disco Duro,6,348716
+744,2025-10-15,Santa Marta,Tablet,6,1249724
+745,2025-03-31,Pereira,Audifonos,5,154966
+746,2025-03-07,Cali,Disco Duro,1,332064
+747,2025-07-20,Santa Marta,Disco Duro,1,348717
+748,2025-11-10,Barranquilla,Tablet,10,1224573
+749,2025-03-14,Bucaramanga,Celular,2,1957208
+750,2025-06-13,Cali,Audifonos,2,145404
+751,2025-06-21,Manizales,Disco Duro,1,330882
+752,2025-12-21,Medellin,Teclado,6,113032
+753,2025-01-01,Bogota,Teclado,7,126888
+754,2025-03-27,Pereira,Impresora,8,732562
+755,2025-07-12,Medellin,Monitor,8,873222
+756,2025-12-18,Barranquilla,Cargador,3,51510
+757,2025-01-18,Cartagena,Impresora,1,640319
+758,2025-02-23,Medellin,Mouse,6,57134
+759,2025-03-24,Medellin,Tablet,9,1293104
+760,2025-11-11,Manizales,Celular,1,1741662
+761,2025-03-26,Santa Marta,Monitor,7,979640
+762,2025-06-19,Barranquilla,Tablet,4,1092853
+763,2025-10-04,Cartagena,Monitor,5,935495
+764,2025-01-26,Pereira,Teclado,10,113701
+765,2025-03-20,Bogota,Camara,6,1174768
+766,2025-05-31,Santa Marta,Laptop,8,2463803
+767,2025-04-16,Cali,Audifonos,5,137910
+768,2025-03-01,Cartagena,Celular,7,1790485
+769,2025-12-05,Cartagena,Impresora,2,698474
+770,2025-04-05,Bucaramanga,Parlante,7,252206
+771,2025-01-23,Cartagena,Mouse,8,56239
+772,2025-05-18,Santa Marta,Impresora,1,666876
+773,2025-12-08,Medellin,Tablet,2,1260536
+774,2025-10-05,Pereira,Parlante,10,242190
+775,2025-07-18,Cucuta,Audifonos,7,151608
+776,2025-09-01,Santa Marta,Camara,4,1141155
+777,2025-07-22,Bogota,Impresora,9,671839
+778,2025-10-20,Santa Marta,Cargador,3,54005
+779,2025-08-18,Cali,Celular,3,1961732
+780,2025-03-06,Bogota,Audifonos,7,159254
+781,2025-08-11,Barranquilla,Celular,3,1975781
+782,2025-02-04,Medellin,Cargador,7,47579
+783,2025-06-16,Cartagena,Camara,9,1077418
+784,2025-01-07,Santa Marta,Impresora,10,758403
+785,2025-02-27,Pereira,Camara,3,1161971
+786,2025-10-26,Medellin,Tablet,2,1215983
+787,2025-05-27,Cucuta,Cargador,6,52795
+788,2025-12-02,Manizales,Monitor,10,857545
+789,2025-03-30,Cartagena,Cargador,7,49730
+790,2025-12-15,Pereira,Tablet,1,1228379
+791,2025-06-19,Barranquilla,Monitor,1,970123
+792,2025-05-18,Bucaramanga,Disco Duro,1,318414
+793,2025-06-05,Cartagena,Mouse,5,63809
+794,2025-12-17,Medellin,Impresora,4,750153
+795,2025-08-15,Bucaramanga,Tablet,5,1152115
+796,2025-11-27,Medellin,Disco Duro,4,314673
+797,2025-07-28,Manizales,Impresora,9,659595
+798,2025-09-21,Cali,Mouse,2,63852
+799,2025-07-26,Cali,Teclado,9,125030
+800,2025-04-09,Barranquilla,Cargador,1,45289
+801,2025-01-26,Bucaramanga,Audifonos,4,135992
+802,2025-08-26,Cucuta,Teclado,7,116840
+803,2025-12-15,Bogota,Parlante,4,271154
+804,2025-08-17,Cali,Mouse,8,59865
+805,2025-06-26,Cali,Cargador,5,50513
+806,2025-02-16,Cartagena,Disco Duro,1,341176
+807,2025-10-20,Barranquilla,Monitor,4,818937
+808,2025-04-16,Cartagena,Parlante,7,236256
+809,2025-12-16,Bogota,Camara,8,994412
+810,2025-11-04,Bogota,Tablet,4,1235369
+811,2025-06-06,Cartagena,Teclado,7,122600
+812,2025-08-24,Cartagena,Monitor,4,963286
+813,2025-09-24,Santa Marta,Impresora,7,672300
+814,2025-09-19,Bucaramanga,Cargador,9,46023
+815,2025-05-25,Cartagena,Parlante,2,254689
+816,2025-05-22,Bucaramanga,Impresora,5,638937
+817,2025-11-30,Cartagena,Teclado,4,123747
+818,2025-05-04,Bogota,Tablet,10,1204150
+819,2025-12-15,Cali,Monitor,1,928895
+820,2025-06-01,Cartagena,Parlante,7,249869
+821,2025-01-19,Santa Marta,Monitor,10,879889
+822,2025-04-24,Cucuta,Audifonos,8,145295
+823,2025-06-03,Cali,Parlante,9,242925
+824,2025-08-30,Cali,Tablet,5,1150508
+825,2025-04-04,Bucaramanga,Disco Duro,2,339734
+826,2025-06-07,Pereira,Audifonos,6,145659
+827,2025-05-31,Manizales,Mouse,2,57127
+828,2025-11-21,Santa Marta,Impresora,10,637515
+829,2025-04-10,Cucuta,Cargador,2,45712
+830,2025-06-02,Pereira,Parlante,1,244083
+831,2025-04-13,Bucaramanga,Tablet,7,1112968
+832,2025-08-23,Cali,Cargador,6,53928
+833,2025-02-11,Manizales,Disco Duro,6,299543
+834,2025-06-10,Bogota,Parlante,1,274332
+835,2025-03-28,Santa Marta,Impresora,3,668294
+836,2025-02-15,Cali,Impresora,10,739930
+837,2025-07-26,Pereira,Monitor,8,924028
+838,2025-10-01,Barranquilla,Monitor,6,810840
+839,2025-09-29,Barranquilla,Laptop,1,2696003
+840,2025-05-08,Barranquilla,Parlante,6,225206
+841,2025-07-16,Cucuta,Teclado,10,111094
+842,2025-01-24,Cartagena,Teclado,5,112008
+843,2025-11-02,Cucuta,Impresora,6,731896
+844,2025-03-10,Bucaramanga,Monitor,8,969835
+845,2025-03-26,Pereira,Mouse,1,63001
+846,2025-03-09,Barranquilla,Audifonos,1,141730
+847,2025-03-05,Bucaramanga,Cargador,1,50046
+848,2025-05-11,Cucuta,Monitor,10,967778
+849,2025-01-25,Medellin,Laptop,1,2546962
+850,2025-08-02,Manizales,Laptop,7,2594875
+851,2025-08-31,Cali,Celular,4,1817022
+852,2025-01-05,Cartagena,Disco Duro,7,331887
+853,2025-09-24,Cartagena,Parlante,10,230049
+854,2025-08-03,Medellin,Cargador,9,52007
+855,2025-05-25,Medellin,Disco Duro,2,327533
+856,2025-04-13,Cartagena,Impresora,9,657811
+857,2025-07-29,Cartagena,Audifonos,3,145738
+858,2025-04-17,Manizales,Laptop,6,2524069
+859,2025-12-10,Medellin,Audifonos,2,135082
+860,2025-03-18,Medellin,Cargador,9,51690
+861,2025-02-21,Cartagena,Celular,4,1880483
+862,2025-06-01,Cartagena,Impresora,8,768413
+863,2025-03-31,Bogota,Laptop,5,2299904
+864,2025-06-10,Pereira,Mouse,2,63619
+865,2025-01-24,Bogota,Celular,3,1926449
+866,2025-06-18,Bucaramanga,Parlante,8,257360
+867,2025-02-17,Bucaramanga,Cargador,6,47683
+868,2025-07-24,Manizales,Tablet,5,1107320
+869,2025-09-02,Pereira,Monitor,3,934182
+870,2025-01-31,Cali,Celular,2,1667704
+871,2025-09-05,Santa Marta,Monitor,8,974021
+872,2025-07-03,Santa Marta,Tablet,1,1226718
+873,2025-03-08,Manizales,Parlante,8,268998
+874,2025-08-14,Bogota,Celular,2,1939534
+875,2025-01-07,Cucuta,Teclado,10,123719
+876,2025-12-09,Bucaramanga,Disco Duro,9,324161
+877,2025-11-13,Medellin,Camara,7,1141413
+878,2025-09-04,Bucaramanga,Parlante,7,261333
+879,2025-10-13,Santa Marta,Tablet,1,1281368
+880,2025-03-22,Cucuta,Laptop,8,2571699
+881,2025-02-08,Manizales,Impresora,6,751718
+882,2025-05-23,Bogota,Audifonos,9,144927
+883,2025-07-13,Pereira,Audifonos,4,151515
+884,2025-10-21,Manizales,Celular,2,1785274
+885,2025-03-02,Manizales,Impresora,1,692590
+886,2025-01-19,Cucuta,Celular,9,1765238
+887,2025-11-06,Santa Marta,Laptop,5,2662954
+888,2025-12-02,Manizales,Camara,6,1113713
+889,2025-04-25,Manizales,Mouse,6,63904
+890,2025-11-04,Manizales,Camara,6,1158832
+891,2025-02-19,Barranquilla,Disco Duro,1,316962
+892,2025-11-21,Cartagena,Mouse,9,58262
+893,2025-02-24,Bogota,Camara,3,1072256
+894,2025-07-29,Medellin,Impresora,5,649663
+895,2025-03-03,Pereira,Cargador,4,46959
+896,2025-04-08,Bucaramanga,Impresora,2,745438
+897,2025-11-21,Santa Marta,Monitor,2,818370
+898,2025-10-29,Cucuta,Impresora,3,694034
+899,2025-01-25,Cucuta,Impresora,7,630607
+900,2025-09-18,Cali,Cargador,10,49829
+901,2025-03-07,Medellin,Tablet,7,1255319
+902,2025-06-14,Cucuta,Parlante,7,255027
+903,2025-12-21,Barranquilla,Monitor,5,986310
+904,2025-05-31,Manizales,Monitor,3,983447
+905,2025-12-25,Cucuta,Tablet,5,1179059
+906,2025-06-10,Cucuta,Disco Duro,4,323060
+907,2025-05-29,Bucaramanga,Audifonos,3,141291
+908,2025-04-02,Cucuta,Disco Duro,9,329606
+909,2025-12-30,Medellin,Disco Duro,6,328760
+910,2025-10-20,Pereira,Camara,9,1095681
+911,2025-08-05,Bogota,Teclado,9,129059
+912,2025-03-16,Bogota,Celular,1,1629098
+913,2025-03-24,Cartagena,Audifonos,5,143009
+914,2025-12-20,Cartagena,Tablet,4,1281452
+915,2025-08-20,Medellin,Camara,10,997107
+916,2025-04-25,Cucuta,Parlante,7,261975
+917,2025-12-23,Cartagena,Audifonos,1,150328
+918,2025-12-17,Bucaramanga,Monitor,9,879760
+919,2025-05-09,Barranquilla,Laptop,10,2256483
+920,2025-11-21,Bucaramanga,Impresora,10,746198
+921,2025-04-11,Barranquilla,Camara,5,1152459
+922,2025-12-16,Medellin,Impresora,3,654840
+923,2025-03-03,Pereira,Tablet,1,1256419
+924,2025-05-16,Cali,Monitor,3,860240
+925,2025-01-03,Bucaramanga,Cargador,8,53460
+926,2025-01-21,Cali,Disco Duro,6,348000
+927,2025-11-17,Santa Marta,Cargador,5,45509
+928,2025-10-09,Bucaramanga,Impresora,2,740587
+929,2025-04-23,Cali,Disco Duro,9,308343
+930,2025-03-23,Pereira,Celular,9,1903053
+931,2025-06-28,Barranquilla,Camara,4,1078752
+932,2025-07-04,Cartagena,Parlante,4,241594
+933,2025-10-15,Bogota,Cargador,2,50305
+934,2025-05-04,Santa Marta,Parlante,10,242300
+935,2025-12-16,Bucaramanga,Audifonos,7,163767
+936,2025-10-04,Cartagena,Celular,1,1758915
+937,2025-07-11,Cucuta,Camara,9,1170864
+938,2025-06-01,Barranquilla,Impresora,6,698153
+939,2025-02-19,Cali,Camara,9,1008116
+940,2025-02-03,Barranquilla,Camara,4,991613
+941,2025-02-23,Barranquilla,Parlante,9,246210
+942,2025-08-11,Medellin,Disco Duro,3,344233
+943,2025-06-19,Bogota,Laptop,2,2479613
+944,2025-05-09,Cucuta,Celular,2,1639537
+945,2025-05-13,Pereira,Cargador,7,53216
+946,2025-08-10,Bucaramanga,Impresora,1,718230
+947,2025-10-01,Bogota,Monitor,10,931194
+948,2025-10-27,Bogota,Celular,2,1892146
+949,2025-02-24,Cartagena,Mouse,5,65137
+950,2025-08-13,Pereira,Cargador,7,45865
+951,2025-03-22,Cucuta,Parlante,4,226541
+952,2025-10-07,Cartagena,Tablet,3,1259221
+953,2025-11-28,Bucaramanga,Teclado,1,124255
+954,2025-03-14,Medellin,Camara,1,1182449
+955,2025-07-21,Cucuta,Laptop,9,2536359
+956,2025-06-26,Barranquilla,Celular,7,1729689
+957,2025-03-14,Cali,Parlante,3,267573
+958,2025-05-10,Barranquilla,Audifonos,2,153507
+959,2025-10-18,Bogota,Tablet,9,1241035
+960,2025-02-07,Cartagena,Impresora,2,720254
+961,2025-10-25,Manizales,Teclado,6,110357
+962,2025-12-02,Barranquilla,Mouse,2,55539
+963,2025-04-10,Bucaramanga,Teclado,8,122868
+964,2025-12-04,Cartagena,Impresora,10,675968
+965,2025-07-06,Bucaramanga,Tablet,7,1215732
+966,2025-05-07,Barranquilla,Tablet,7,1081160
+967,2025-03-10,Bucaramanga,Teclado,8,128163
+968,2025-06-06,Manizales,Impresora,9,692350
+969,2025-11-07,Medellin,Celular,5,1683277
+970,2025-04-11,Cartagena,Tablet,2,1293911
+971,2025-01-10,Cucuta,Disco Duro,1,292826
+972,2025-10-30,Barranquilla,Cargador,1,50789
+973,2025-10-04,Manizales,Camara,3,1047336
+974,2025-10-29,Cartagena,Mouse,3,58710
+975,2025-02-16,Pereira,Impresora,6,700157
+976,2025-05-03,Santa Marta,Camara,3,992330
+977,2025-03-23,Cali,Camara,10,1020882
+978,2025-03-16,Manizales,Cargador,6,51594
+979,2025-09-07,Barranquilla,Laptop,2,2359410
+980,2025-01-22,Barranquilla,Teclado,9,116866
+981,2025-08-21,Bogota,Mouse,1,58657
+982,2025-12-27,Cucuta,Parlante,5,241204
+983,2025-10-06,Santa Marta,Disco Duro,3,304852
+984,2025-07-07,Santa Marta,Monitor,2,927662
+985,2025-04-25,Cucuta,Camara,7,1045349
+986,2025-06-26,Manizales,Mouse,8,63807
+987,2025-03-13,Manizales,Cargador,3,45066
+988,2025-11-26,Cartagena,Audifonos,4,137313
+989,2025-07-05,Santa Marta,Tablet,2,1124857
+990,2025-06-19,Medellin,Parlante,8,236517
+991,2025-04-18,Santa Marta,Parlante,3,248941
+992,2025-01-12,Barranquilla,Parlante,1,266668
+993,2025-03-24,Cali,Tablet,9,1217637
+994,2025-03-17,Bogota,Laptop,3,2695399
+995,2025-09-22,Pereira,Teclado,10,130139
+996,2025-12-05,Cartagena,Cargador,2,51376
+997,2025-08-30,Manizales,Audifonos,3,148476
+998,2025-11-04,Cali,Audifonos,10,159911
+999,2025-09-19,Cartagena,Tablet,3,1229571
+1000,2025-08-21,Santa Marta,Disco Duro,10,331878
